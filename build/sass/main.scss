@@ -1,0 +1,87 @@
+// Globals
+@import 'compass/css3';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+
+// Colors
+$black          		: #262626;
+$white          		: #F7F7F7;
+$light-grey     		: #ECECEC;
+$cyan           		: #78FDFF;
+
+// Colors by name
+$header-bg 					: $black;
+$header-text				: $cyan;
+
+// Margins
+$name-margin        : 275px;
+$content-padding    : 80px;
+
+// Sizing | Height & Width
+$header-height    	: 360px;
+$sub-header-height	: 220px;
+$thumbnail-height   : 460px;
+$thumbnail-width    : 670px;
+$border-thumbnail   : 6px;
+$side-column-width  : 450px;
+
+// Font weight
+$light              : 300;
+$lighter            : lighter;
+
+// Font Spacing
+$slight             :  3.5px;
+
+
+// Top Header
+
+.header{
+	background  			: $header-bg;
+	height  					: $header-height;
+	.name{
+		margin-top      : $name-margin;
+		color           : $cyan;
+		h1{
+			font-size     : 48px;
+			font-weight   : $lighter;
+			letter-spacing: $slight;
+		}
+	}
+}
+
+.sub-header{
+	background        : $light-grey;
+	height            : $sub-header-height;
+}
+
+.content{
+	.section{
+		padding-top      : $content-padding;
+	}
+	padding-bottom    : $content-padding;
+	padding-right     : $content-padding;
+	.thumbnail-post{
+		height          : $thumbnail-height;
+		width           : $thumbnail-width;
+		// background      : url(../images/titan-prev.jpg)  no-repeat center center;
+		img{
+		@include border-radius($border-thumbnail, $border-thumbnail);
+		}
+		@include background-size(cover);
+	}
+	.side-column{
+		width           : $side-column-width;
+		padding-left    : $content-padding;
+		.post-description{
+			h4{
+				line-height   : 190%;
+			}
+		}
+	}
+
+	.post-divider{
+
+		padding         : $content-padding;
+	}
+
+}

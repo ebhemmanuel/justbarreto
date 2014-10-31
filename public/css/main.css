@@ -1,0 +1,60 @@
+/* line 38, ../../build/sass/main.scss */
+.header {
+  background: #262626;
+  height: 360px;
+}
+/* line 41, ../../build/sass/main.scss */
+.header .name {
+  margin-top: 275px;
+  color: #78fdff;
+}
+/* line 44, ../../build/sass/main.scss */
+.header .name h1 {
+  font-size: 48px;
+  font-weight: lighter;
+  letter-spacing: 3.5px;
+}
+
+/* line 52, ../../build/sass/main.scss */
+.sub-header {
+  background: #ececec;
+  height: 220px;
+}
+
+/* line 57, ../../build/sass/main.scss */
+.content {
+  padding-bottom: 80px;
+  padding-right: 80px;
+}
+/* line 58, ../../build/sass/main.scss */
+.content .section {
+  padding-top: 80px;
+}
+/* line 63, ../../build/sass/main.scss */
+.content .thumbnail-post {
+  height: 460px;
+  width: 670px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 67, ../../build/sass/main.scss */
+.content .thumbnail-post img {
+  -webkit-border-radius: 6px 6px;
+  -moz-border-radius: 6px / 6px;
+  border-radius: 6px / 6px;
+}
+/* line 72, ../../build/sass/main.scss */
+.content .side-column {
+  width: 450px;
+  padding-left: 80px;
+}
+/* line 76, ../../build/sass/main.scss */
+.content .side-column .post-description h4 {
+  line-height: 190%;
+}
+/* line 82, ../../build/sass/main.scss */
+.content .post-divider {
+  padding: 80px;
+}

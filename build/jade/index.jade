@@ -10,14 +10,61 @@ html
 		link(href="public/css/main.css" type="text/css" rel="stylesheet")
 
 	body
-		.header
-			.name
+		.header.container-fluid
+			.name.col-md-4.col-md-push-1
 				h1 Emmanuel Barreto
-		.sub-header
-			.title
-				h4 Web Developer / Graphic Designer
-			.contact
-				a(href="#contact")
-					| Contact Info
-		.content
+		.sub-header.container-fluid
+			.container
+				.title
+					h4 Web Developer / Graphic Designer
+				.contact
+					a(href="#contact")
+						| Contact Info
+		.content.container-fluid
+			.container.section
+				.thumbnail-post.col-lg-4
+					a(href="http://ebhemmanuel.github.io/WSP/" target="_blank")
+						img(src="public/images/leica-prev.jpg")
+				.col-lg-4.side-column
+					.title-post
+						h1
+							| LEICA Redo
+					.post-description
+						h4.
+								Redid the front page of Leica as part of a class project. Focused on a design
+								more emphasized on Leica's product and their branding.
+					.tech-used
+				.post-divider
+
+			.container.section
+				.thumbnail-post.col-lg-4
+					a(href="http://ebhemmanuel.github.io/PWA2/" target="_blank")
+						img(src="public/images/titan-prev2.jpg")
+				.col-lg-4.side-column
+					.title-post
+						h1
+							| Titan Tech
+					.post-description
+						h4.
+							A class project concentrating on learning jquery and json.
+							Used jade and sass to create store a front for a company
+							that builds custom computers.
+					.tech-used
+				.post-divider
+
+		footer.container-fluid
+			.container
+				a(name="contact")#contact
+				ul.list-unstyled
+					strong
+						li Emmanuel Barreto
+					li e: ebh.emmanuel@gmail.com
+					li c: 787-502-9959
+
+		script(src="public/js/jquery-1.11.1.min.js")
+		//- script(src="public/js/jquery.smooth-scroll.min.js")
+		script(src="public/js/smooth.pack.js")
+		script(src="public/js/bootstrap.min.js")
+		script(src="public/js/main.js")
+
 
