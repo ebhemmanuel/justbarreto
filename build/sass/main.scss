@@ -38,12 +38,15 @@ $link-hover         : $grey;
 $sub-header-bg      : $white;
 $content-bg         : $light-grey;
 $footer-bg          : $white;
+$side-column-bg     : $white;
 
 // Margins
 $name-margin        : 275px;
 $content-padding    : 80px;
+$side-margin-top    : -10px;
+$side-padding       : 40px;
+$side-padding-l     : 55px;
 $footer-padding     : 35px;
-$side-margin-top    : -20px;
 
 // Sizing | Height & Width
 $header-height    	: 360px;
@@ -52,6 +55,7 @@ $thumbnail-height   : 460px;
 $thumbnail-width    : 670px;
 $border-thumbnail   : 6px;
 $side-column-width  : 450px;
+$side-column-height : 460px;
 $footer-height      : 80px;
 
 // Font weight
@@ -61,6 +65,26 @@ $lighter            : lighter;
 // Font Spacing
 $slight             : 3.5px;
 $normal             : 2px;
+
+// Link format
+
+a{
+	color             : $link;
+	&:hover{
+		color           : $link-hover;
+	}
+}
+.contact-style{
+	font-weight      : $light;
+	letter-spacing   : $normal;
+}
+
+// Additional Elements
+
+.post-divider{
+		padding-bottom  : 40px;
+		height          : 2px;
+}
 
 
 // Top Header
@@ -82,21 +106,12 @@ $normal             : 2px;
 	}
 }
 
-a{
-	color             : $link;
-	&:hover{
-		color           : $link-hover;
-	}
-}
-.contact-style{
-	font-weight      : $light;
-	letter-spacing   : $normal;
-}
-
 .sub-header{
 	background        : $sub-header-bg;
 	height            : $sub-header-height;
 }
+
+// Content Section
 
 .content{
 	background        : $content-bg;
@@ -109,25 +124,27 @@ a{
 		height          : $thumbnail-height;
 		width           : $thumbnail-width;
 		// background      : url(../images/titan-prev.jpg)  no-repeat center center;
-		img{
-		@include border-radius($border-thumbnail, $border-thumbnail);
-		}
-		@include background-size(cover);
-	}
+		img{@include border-radius(6px 0px 0px 6px, 6px 0px 0px 6px);}
+	} // end of .thumbnail-post
 	.side-column{
-		margin-top      : $side-margin-top;
+		@include border-radius(0px 6px 6px 0px, 0px 6px 6px 0px);
+		margin-left     : 15px;
+		background      : $side-column-bg;
+		// margin-top      : $side-margin-top;
 		width           : $side-column-width;
-		padding-left    : $content-padding;
+		height          : $side-column-height;
+		padding         : $side-padding ;
+		padding-left    : $side-padding-l;
 		.post-description{
 			h4{
 				line-height   : 190%;
 			}
-		}
-	}
-	.post-divider{
-		padding         : $content-padding;
-	}
+		} // end of .post-description
+	} // end of .side-column
 }
+
+
+// Footer
 
 footer{
 	height            : $footer-height;
