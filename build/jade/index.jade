@@ -16,14 +16,34 @@ html
 		.sub-header.container-fluid
 			.container
 				.title
-					h4 Web Developer / Graphic Designer
-				.contact
-					a(href="#contact")
-						| Contact Info
+					ul.list-inline
+						li
+							h4 Web Developer / Graphic Designer
+						li
+							| |
+						li
+							a(href="#contact")
+								h4.contact-style
+									| Contact +
+
+
 		.content.container-fluid
 			.container.section
 				.thumbnail-post.col-lg-4
-					a(href="http://ebhemmanuel.github.io/WSP/" target="_blank")
+					img(src="public/images/oding_logo.jpg")
+				.col-lg-4.side-column
+					.title-post
+						h1
+							| Odin's Honor
+					.post-description
+						h4.
+								A logo used in class work for a project manager. Variations and process of creating this will be posted soon.
+					.tech-used
+				.post-divider
+
+			.container.section
+				.thumbnail-post.col-lg-4
+					a(href="http://ebhemmanuel.github.io/leica-redo" target="_blank")
 						img(src="public/images/leica-prev.jpg")
 				.col-lg-4.side-column
 					.title-post
@@ -32,7 +52,20 @@ html
 					.post-description
 						h4.
 								Redid the front page of Leica as part of a class project. Focused on a design
-								more emphasized on Leica's product and their branding.
+								more emphasized on Leica's products and their branding.
+					.tech-used
+				.post-divider
+
+			.container.section
+				.thumbnail-post.col-lg-4
+					img(src="public/images/amanda.jpg")
+				.col-lg-4.side-column
+					.title-post
+						h1
+							| Amanda Smith Branding
+					.post-description
+						h4.
+								Worked closely with the client to bring together a modern design for her photography services.
 					.tech-used
 				.post-divider
 
@@ -47,19 +80,21 @@ html
 					.post-description
 						h4.
 							A class project concentrating on learning jquery and json.
-							Used jade and sass to create store a front for a company
+							Used jade and sass to create a store front for a company
 							that builds custom computers.
 					.tech-used
 				.post-divider
 
 		footer.container-fluid
-			.container
+			.container.text-right
 				a(name="contact")#contact
-				ul.list-unstyled
-					strong
-						li Emmanuel Barreto
-					li e: ebh.emmanuel@gmail.com
-					li c: 787-502-9959
+				ul.list-inline
+					li
+						a(href="mailto:ebh.emmanuel@gmail.com" target="_blank") Email
+					li
+						a(href="https://www.linkedin.com/in/justbarreto" target="_blank"). LinkedIn
+					li
+						a(href="https://twitter.com/justbarreto" target="_blank"). Twitter
 
 		script(src="public/js/jquery-1.11.1.min.js")
 		//- script(src="public/js/jquery.smooth-scroll.min.js")

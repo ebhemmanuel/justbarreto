@@ -1,36 +1,60 @@
-/* line 38, ../../build/sass/main.scss */
+@font-face {
+  font-family: "karlaitalic";
+  src: url('url("public/fonts/karla/karla-regular-webfont").eot');
+  src: url('url("public/fonts/karla/karla-regular-webfont").eot?#iefix') format("embedded-opentype"), url('url("public/fonts/karla/karla-regular-webfont").woff') format("woff"), url('url("public/fonts/karla/karla-regular-webfont").ttf') format("truetype"), url('url("public/fonts/karla/karla-regular-webfont").svg#karlaitalic') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 67, ../../build/sass/main.scss */
 .header {
   background: #262626;
   height: 360px;
 }
-/* line 41, ../../build/sass/main.scss */
+/* line 72, ../../build/sass/main.scss */
 .header .name {
   margin-top: 275px;
   color: #78fdff;
 }
-/* line 44, ../../build/sass/main.scss */
+/* line 75, ../../build/sass/main.scss */
 .header .name h1 {
   font-size: 48px;
   font-weight: lighter;
   letter-spacing: 3.5px;
 }
 
-/* line 52, ../../build/sass/main.scss */
+/* line 84, ../../build/sass/main.scss */
+a {
+  color: #262626;
+}
+/* line 86, ../../build/sass/main.scss */
+a:hover {
+  color: #666666;
+}
+
+/* line 90, ../../build/sass/main.scss */
+.contact-style {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* line 95, ../../build/sass/main.scss */
 .sub-header {
-  background: #ececec;
+  background: #f7f7f7;
   height: 220px;
 }
 
-/* line 57, ../../build/sass/main.scss */
+/* line 100, ../../build/sass/main.scss */
 .content {
+  background: #ececec;
   padding-bottom: 80px;
   padding-right: 80px;
 }
-/* line 58, ../../build/sass/main.scss */
+/* line 102, ../../build/sass/main.scss */
 .content .section {
   padding-top: 80px;
 }
-/* line 63, ../../build/sass/main.scss */
+/* line 107, ../../build/sass/main.scss */
 .content .thumbnail-post {
   height: 460px;
   width: 670px;
@@ -39,22 +63,29 @@
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 67, ../../build/sass/main.scss */
+/* line 111, ../../build/sass/main.scss */
 .content .thumbnail-post img {
   -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px / 6px;
   border-radius: 6px / 6px;
 }
-/* line 72, ../../build/sass/main.scss */
+/* line 116, ../../build/sass/main.scss */
 .content .side-column {
   width: 450px;
   padding-left: 80px;
 }
-/* line 76, ../../build/sass/main.scss */
+/* line 120, ../../build/sass/main.scss */
 .content .side-column .post-description h4 {
   line-height: 190%;
 }
-/* line 82, ../../build/sass/main.scss */
+/* line 125, ../../build/sass/main.scss */
 .content .post-divider {
   padding: 80px;
+}
+
+/* line 130, ../../build/sass/main.scss */
+footer {
+  height: 80px;
+  background: #f7f7f7;
+  padding-top: 35px;
 }
