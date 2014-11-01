@@ -43,6 +43,7 @@ $footer-bg          : $white;
 $name-margin        : 275px;
 $content-padding    : 80px;
 $footer-padding     : 35px;
+$side-margin-top    : -20px;
 
 // Sizing | Height & Width
 $header-height    	: 360px;
@@ -114,6 +115,7 @@ a{
 		@include background-size(cover);
 	}
 	.side-column{
+		margin-top      : $side-margin-top;
 		width           : $side-column-width;
 		padding-left    : $content-padding;
 		.post-description{
