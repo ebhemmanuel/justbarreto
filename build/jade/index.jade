@@ -11,8 +11,9 @@ html
 
 	body
 		.header.container-fluid
-			.name.col-md-4.col-md-push-1
-				h1 Emmanuel Barreto
+			.container
+				.name.col-md-6.col-lg-6
+					h1 Emmanuel Barreto
 		.sub-header.container-fluid
 			.container
 				.title
@@ -23,19 +24,19 @@ html
 							| |
 						li
 							a(href="#contact")
-								h4.contact-style
+								h4.contact-style.button-contact.text-center
 									| Contact +
 						li
 							a(href="download/Barreto_Emmanuel_Resume(online).pdf" target="_blank")
-								h4.contact-style
+								h4.contact-style.button-resume.text-center
 									| Resume
 
 
 		.content.container-fluid
-			.container.section
+			.section.container
 				.thumbnail-post.col-lg-4
 					img(src="public/images/kranium-prev.jpg")
-				.col-lg-4.side-column
+				.side-column.col-lg-4
 					.title-post
 						h1
 							| Kraniumtivity
@@ -49,7 +50,7 @@ html
 			.container.section
 				.thumbnail-post.col-lg-4
 					img(src="public/images/oding_logo.jpg")
-				.col-lg-4.side-column
+				.side-column.col-lg-4
 					.title-post
 						h1
 							| Odin's Hub
@@ -63,7 +64,7 @@ html
 				.thumbnail-post.col-lg-4
 					a(href="http://ebhemmanuel.github.io/leica-redo" target="_blank")
 						img(src="public/images/leica-prev.jpg")
-				.col-lg-4.side-column
+				.side-column.col-sm-2.col-md-4.col-lg-4
 					.title-post
 						h1
 							| Leica Redesign
@@ -77,10 +78,10 @@ html
 			.container.section
 				.thumbnail-post.col-lg-4
 					img(src="public/images/amanda.jpg")
-				.col-lg-4.side-column
+				.side-column.col-lg-4
 					.title-post
 						h1
-							| Amanda Smith Logo Design
+							| Amanda Smith Logo
 					.post-description
 						h4.
 								Worked closely with the client to bring together a modern design for her photography services.
@@ -91,7 +92,7 @@ html
 				.thumbnail-post.col-lg-4
 					a(href="http://ebhemmanuel.github.io/PWA2/" target="_blank")
 						img(src="public/images/titan-prev2.jpg")
-				.col-lg-4.side-column
+				.side-column.col-lg-4
 					.title-post
 						h1
 							| Titan Tech
@@ -108,8 +109,8 @@ html
 				a(name="contact")#contact
 				.col-lg-4
 					ul.list-inline.text-left
-						li &#0169; 2014 Emmanuel Barreto
-				ul.list-inline.text-right
+						li.text-muted &#0169; 2014 Emmanuel Barreto
+				ul.list-inline.col-md-offset-8
 					li
 						strong
 							| Get in touch &#8594;

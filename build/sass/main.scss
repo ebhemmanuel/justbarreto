@@ -3,6 +3,16 @@
 @import 'compass/css3/transform';
 @import 'compass/css3/transition';
 
+// Mixins
+
+@mixin transition{
+	transition        : background .2s ease, color 0.2s ease;
+}
+
+@mixin transition-mix($type, $time, $method ){
+	transition        : $type $time $method;
+}
+
 // Fonts
 
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
@@ -31,29 +41,56 @@ $light-grey     		: #ECECEC;
 $cyan           		: #78FDFF;
 
 // Colors by name
+	// Header
 $header-bg 					: $black;
 $header-text				: $cyan;
+	// Links
 $link								: $black;
 $link-hover         : $grey;
+	// Sub-Header
 $sub-header-bg      : $white;
+	// Content
 $content-bg         : $light-grey;
-$footer-bg          : $white;
+	// Side-Column
 $side-column-bg     : $white;
+	// Footer
+$footer-bg          : $white;
 
 // Margins
-$name-margin        : 275px;
+	// Name
+$name-margin-left   : -15px;
+ 	// Sub
+$title-margin-top   : 6px;
+	// Content
 $content-padding    : 80px;
+	// Side-column
 $side-margin-top    : -10px;
 $side-padding       : 40px;
 $side-padding-l     : 55px;
+	// Footer
 $footer-padding     : 35px;
-
+$footer-margin-left : 30px;
+// Sizing Big
+	$name-margin-top    : 275px; // Big   View
+	$header-height    	: 360px; // Big    View
+	$sub-header-height	: 220px; // Medium View
+// Sizing Small
+	// $name-margin-top    : 6px;     // Small View
+	// $header-height    	: 90px;   // Small  View
+	// $sub-header-height	: 60px;   // Small  View
 // Sizing | Height & Width
-$header-height    	: 360px;
-$sub-header-height	: 220px;
+
+	// Button
+$button-font-size   : 14px;
+$button-height      : 30px;
+$button-width       : 100px;
+$button-padding     : 6px;
+	// Thumbnail
 $thumbnail-height   : 460px;
 $thumbnail-width    : 670px;
+	// Border
 $border-thumbnail   : 6px;
+$border-button      : 20px;
 $side-column-width  : 450px;
 $side-column-height : 460px;
 $footer-height      : 80px;
@@ -71,6 +108,7 @@ $normal             : 2px;
 a{
 	color             : $link;
 	&:hover{
+		text-decoration : none;
 		color           : $link-hover;
 	}
 }
@@ -78,6 +116,34 @@ a{
 	font-weight      : $light;
 	letter-spacing   : $normal;
 }
+
+%button{
+    @include transition;
+    @include border-radius($border-button);
+    height            : $button-height;
+    width             : $button-width;
+    background        : transparent;
+    font-size         : $button-font-size;
+    border            : 1px solid $black;
+    color             : $black;
+    margin-left       : -3px;
+    font-weight       : $light;
+    padding-top       : $button-padding;
+    cursor            : pointer;
+    &:hover{
+      background      : $black;
+      color           : $white;
+    }
+ }
+
+.button-contact{
+ 	@extend %button;
+ 	width             : 105px;
+}
+.button-resume{
+ 	@extend %button;
+}
+
 
 // Additional Elements
 
@@ -95,7 +161,8 @@ a{
 	// @include background-size(cover);
 	height  					: $header-height;
 	.name{
-		margin-top      : $name-margin;
+		margin-top      : $name-margin-top;
+		margin-left     : $name-margin-left;
 		color           : $cyan;
 		h1{
 
@@ -107,8 +174,12 @@ a{
 }
 
 .sub-header{
-	background        : $sub-header-bg;
+	// margin-top        : $title-margin-top;
 	height            : $sub-header-height;
+	background        : $sub-header-bg;
+	.title{
+		margin-top      : $title-margin-top;
+	}
 }
 
 // Content Section
@@ -124,10 +195,10 @@ a{
 		height          : $thumbnail-height;
 		width           : $thumbnail-width;
 		// background      : url(../images/titan-prev.jpg)  no-repeat center center;
-		img{@include border-radius(6px 0px 0px 6px, 6px 0px 0px 6px);}
+		img{@include border-radius($border-thumbnail 0px 0px $border-thumbnail, $border-thumbnail 0px 0px $border-thumbnail);}
 	} // end of .thumbnail-post
 	.side-column{
-		@include border-radius(0px 6px 6px 0px, 0px 6px 6px 0px);
+		@include border-radius(0px $border-thumbnail $border-thumbnail 0px, 0px $border-thumbnail $border-thumbnail 0px);
 		margin-left     : 15px;
 		background      : $side-column-bg;
 		// margin-top      : $side-margin-top;
@@ -137,6 +208,7 @@ a{
 		padding-left    : $side-padding-l;
 		.post-description{
 			h4{
+				font-weight   : $light;
 				line-height   : 190%;
 			}
 		} // end of .post-description
@@ -150,4 +222,8 @@ footer{
 	height            : $footer-height;
 	background        : $footer-bg;
 	padding-top       : $footer-padding;
+
+	.footer-links{
+		margin-left     : $footer-margin-left;
+	}
 }
