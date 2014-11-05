@@ -5,6 +5,27 @@
 
 // Mixins
 
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/
+
+@mixin tech-used($name,$color){
+	.#{$name}{
+		@extend %button;
+		border    			: 1px solid $color;
+		font-color  		: $color;
+	}
+}
+
+@mixin generate-box ($class, $width, $height) {
+    .#{$class} { width: $width; height: $height; }
+}
+
 @mixin transition{
 	transition        : background .2s ease, color 0.2s ease;
 }
@@ -70,11 +91,11 @@ $side-padding-l     : 55px;
 	// Footer
 $footer-padding     : 35px;
 $footer-margin-left : 30px;
-// Sizing Big
-	$name-margin-top    : 275px; // Big   View
-	$header-height    	: 360px; // Big    View
-	$sub-header-height	: 220px; // Medium View
-// Sizing Small
+// Sizing Big Header
+	$name-margin-top  : 275px; // Big   View
+	$header-height    : 360px; // Big    View
+	$sub-header-height: 220px; // Medium View
+// Sizing Small Header
 	// $name-margin-top    : 6px;     // Small View
 	// $header-height    	: 90px;   // Small  View
 	// $sub-header-height	: 60px;   // Small  View
@@ -84,7 +105,7 @@ $footer-margin-left : 30px;
 $button-font-size   : 14px;
 $button-height      : 30px;
 $button-width       : 100px;
-$button-padding     : 6px;
+$button-padding     : 7px;
 	// Thumbnail
 $thumbnail-height   : 460px;
 $thumbnail-width    : 670px;
@@ -113,28 +134,28 @@ a{
 	}
 }
 .contact-style{
-	font-weight      : $light;
-	letter-spacing   : $normal;
+	font-weight       : $light;
+	letter-spacing    : $normal;
 }
 
 %button{
-    @include transition;
-    @include border-radius($border-button);
-    height            : $button-height;
-    width             : $button-width;
-    background        : transparent;
-    font-size         : $button-font-size;
-    border            : 1px solid $black;
-    color             : $black;
-    margin-left       : -3px;
-    font-weight       : $light;
-    padding-top       : $button-padding;
-    cursor            : pointer;
-    &:hover{
-      background      : $black;
-      color           : $white;
-    }
- }
+  @include transition;
+  @include border-radius($border-button);
+  height            : $button-height;
+  width             : $button-width;
+  background        : transparent;
+  font-size         : $button-font-size;
+  border            : 1px solid $black;
+  color             : $black;
+  margin-left       : -3px;
+  font-weight       : $light;
+  padding-top       : $button-padding;
+  cursor            : pointer;
+  &:hover{
+    background      : $black;
+    color           : $white;
+  }
+}
 
 .button-contact{
  	@extend %button;
@@ -144,14 +165,12 @@ a{
  	@extend %button;
 }
 
-
 // Additional Elements
 
 .post-divider{
 		padding-bottom  : 40px;
 		height          : 2px;
 }
-
 
 // Top Header
 
@@ -208,8 +227,8 @@ a{
 		padding-left    : $side-padding-l;
 		.post-description{
 			h4{
-				font-weight   : $light;
-				line-height   : 190%;
+				font-weight : $light;
+				line-height : 190%;
 			}
 		} // end of .post-description
 	} // end of .side-column
@@ -227,3 +246,11 @@ footer{
 		margin-left     : $footer-margin-left;
 	}
 }
+
+
+
+
+
+
+
+
