@@ -63,6 +63,7 @@ $cyan           		: #78FDFF;
 
 // Colors by name
 	// Header
+$header-img         : url(../images/header.jpg);
 $header-bg 					: $black;
 $header-text				: $cyan;
 	// Links
@@ -176,7 +177,7 @@ a{
 
 .header{
 	background  			: $header-bg;
-	// background        : url(../images/cover-compressor.jpeg)  no-repeat center center;
+	background        : $header-img  no-repeat center center;
 	// @include background-size(cover);
 	height  					: $header-height;
 	.name{
