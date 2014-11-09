@@ -87,8 +87,8 @@ $footer-padding     : 35px;
 $footer-margin-left : 30px;
 // Sizing Big Header
 	// $name-margin-top  : 275px; // Big   View
-	$name-margin-top  : 140px; // Big   View
-	$header-height    : 480px; // Big    View
+	$name-margin-top  : 220px; // Big   View
+	$header-height    : 680px; // Big    View
 	// $sub-header-height: 220px; // Medium View
 // Sizing Small Header
 	// $name-margin-top    : 6px;     // Small View
@@ -102,7 +102,7 @@ $button-height      : 30px;
 $button-width       : 100px;
 $button-padding     : 7px;
 	// Thumbnail
-$thumbnail-height   : 460px;
+$thumbnail-height   : 760px;
 $thumbnail-width    : 670px;
 	// Border
 $border-thumbnail   : 6px;
@@ -188,6 +188,20 @@ a{
 			letter-spacing: $slight;
 		}
 	}
+	.contact {
+		display         : none;
+		margin-top      : 50px;
+		a{
+			@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+			font-family   : "Karla";
+			font-weight   : 300;
+			letter-spacing: $normal;
+			color         : orange;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .sub-header{
@@ -195,6 +209,7 @@ a{
 	height            : $sub-header-height;
 	background        : $sub-header-bg;
 	.title{
+
 		margin-top      : $title-margin-top;
 	}
 }
@@ -207,19 +222,24 @@ a{
 		padding-top     : $content-padding;
 	}
 	padding-bottom    : $content-padding;
-	padding-right     : $content-padding;
 	.thumbnail-post{
-		height          : $thumbnail-height;
-		width           : $thumbnail-width;
+
+		img{
+			width         : 100%;
+			max-height    : $thumbnail-height;
+			height        : 100%;
+		}
+
+		// width           : $thumbnail-width;
 		// background      : url(../images/titan-prev.jpg)  no-repeat center center;
 		img{@include border-radius($border-thumbnail 0px 0px $border-thumbnail, $border-thumbnail 0px 0px $border-thumbnail);}
 	} // end of .thumbnail-post
 	.side-column{
 		@include border-radius(0px $border-thumbnail $border-thumbnail 0px, 0px $border-thumbnail $border-thumbnail 0px);
-		margin-left     : 15px;
+		margin-left     : -15px;
 		background      : $side-column-bg;
 		// margin-top      : $side-margin-top;
-		width           : $side-column-width;
+		// width           : $side-column-width;
 		height          : $side-column-height;
 		padding         : $side-padding ;
 		padding-left    : $side-padding-l;
