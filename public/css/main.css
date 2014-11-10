@@ -37,7 +37,6 @@ a:hover {
   border: 1px solid #f7f7f7;
   color: #f7f7f7;
   margin-left: -3px;
-  font-weight: 300;
   padding-top: 7px;
   cursor: pointer;
 }
@@ -67,11 +66,11 @@ a:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 680px;
+  height: 560px;
 }
 /* line 178, ../../build/sass/main.scss */
 .header .name {
-  margin-top: 220px;
+  margin-top: 160px;
   margin-left: -15px;
   color: #f7f7f7;
 }
@@ -95,11 +94,11 @@ a:hover {
 /* line 194, ../../build/sass/main.scss */
 .header .contact a {
   @font-face {
-    font-family: "Karla";
-    src: "/fonts/karla/karla-regular.ttf";
+    font-family: "Montserrat";
+    src: "/fonts/Montserrat/Montserrat-Regular.ttf";
 }
 
-  font-family: "Karla";
+  font-family: "Montserrat";
   font-weight: 300;
   letter-spacing: 2px;
   color: orange;
