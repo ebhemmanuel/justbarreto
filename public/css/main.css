@@ -6,31 +6,23 @@ without having to write out the text inside, or all the : and ;
 @include tech-used (.illustrator,$orange,1px);
 @include tech-used (.git,$purple,1px);
 */
-@font-face {
-  font-family: "karlaitalic";
-  src: url('url("public/fonts/karla/karla-regular-webfont").eot');
-  src: url('url("public/fonts/karla/karla-regular-webfont").eot?#iefix') format("embedded-opentype"), url('url("public/fonts/karla/karla-regular-webfont").woff') format("woff"), url('url("public/fonts/karla/karla-regular-webfont").ttf') format("truetype"), url('url("public/fonts/karla/karla-regular-webfont").svg#karlaitalic') format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 129, ../../build/sass/main.scss */
+/* line 124, ../../build/sass/main.scss */
 a {
   color: #262626;
 }
-/* line 131, ../../build/sass/main.scss */
+/* line 126, ../../build/sass/main.scss */
 a:hover {
   text-decoration: none;
   color: #666666;
 }
 
-/* line 136, ../../build/sass/main.scss */
+/* line 131, ../../build/sass/main.scss */
 .contact-style {
   font-weight: 300;
   letter-spacing: 2px;
 }
 
-/* line 141, ../../build/sass/main.scss */
+/* line 136, ../../build/sass/main.scss */
 .button-contact, .button-resume {
   transition: background .2s ease, color 0.2s ease;
   -webkit-border-radius: 20px;
@@ -42,104 +34,137 @@ a:hover {
   width: 100px;
   background: transparent;
   font-size: 14px;
-  border: 1px solid #262626;
-  color: #262626;
+  border: 1px solid #f7f7f7;
+  color: #f7f7f7;
   margin-left: -3px;
   font-weight: 300;
   padding-top: 7px;
   cursor: pointer;
 }
-/* line 154, ../../build/sass/main.scss */
+/* line 149, ../../build/sass/main.scss */
 .button-contact:hover, .button-resume:hover {
   background: #262626;
   color: #f7f7f7;
+  border: 1px solid #262626;
 }
 
-/* line 160, ../../build/sass/main.scss */
+/* line 156, ../../build/sass/main.scss */
 .button-contact {
   width: 105px;
 }
 
-/* line 170, ../../build/sass/main.scss */
+/* line 166, ../../build/sass/main.scss */
 .post-divider {
   padding-bottom: 40px;
   height: 2px;
 }
 
-/* line 177, ../../build/sass/main.scss */
+/* line 173, ../../build/sass/main.scss */
 .header {
   background: #262626;
-  height: 360px;
+  background: url(../images/header.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 680px;
 }
-/* line 182, ../../build/sass/main.scss */
+/* line 178, ../../build/sass/main.scss */
 .header .name {
-  margin-top: 275px;
+  margin-top: 220px;
   margin-left: -15px;
-  color: #78fdff;
+  color: #f7f7f7;
 }
-/* line 186, ../../build/sass/main.scss */
+/* line 183, ../../build/sass/main.scss */
 .header .name h1 {
-  font-size: 48px;
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
+}
+
+  font-family: "Karla";
+  font-size: 40px;
   font-weight: lighter;
   letter-spacing: 3.5px;
 }
+/* line 191, ../../build/sass/main.scss */
+.header .contact {
+  display: none;
+  margin-top: 50px;
+}
+/* line 194, ../../build/sass/main.scss */
+.header .contact a {
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
+}
 
-/* line 195, ../../build/sass/main.scss */
+  font-family: "Karla";
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: orange;
+}
+/* line 200, ../../build/sass/main.scss */
+.header .contact a:hover {
+  text-decoration: none;
+}
+
+/* line 207, ../../build/sass/main.scss */
 .sub-header {
-  height: 220px;
+  display: none;
+  height: 60px;
   background: #f7f7f7;
 }
-/* line 199, ../../build/sass/main.scss */
+/* line 211, ../../build/sass/main.scss */
 .sub-header .title {
   margin-top: 6px;
 }
 
-/* line 206, ../../build/sass/main.scss */
+/* line 219, ../../build/sass/main.scss */
 .content {
   background: #ececec;
   padding-bottom: 80px;
-  padding-right: 80px;
 }
-/* line 208, ../../build/sass/main.scss */
+/* line 221, ../../build/sass/main.scss */
 .content .section {
   padding-top: 80px;
 }
-/* line 213, ../../build/sass/main.scss */
-.content .thumbnail-post {
-  height: 460px;
-  width: 670px;
+/* line 227, ../../build/sass/main.scss */
+.content .thumbnail-post img {
+  width: 100%;
+  max-height: 760px;
+  height: 100%;
 }
-/* line 217, ../../build/sass/main.scss */
+/* line 235, ../../build/sass/main.scss */
 .content .thumbnail-post img {
   -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
   border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
 }
-/* line 219, ../../build/sass/main.scss */
+/* line 237, ../../build/sass/main.scss */
 .content .side-column {
   -webkit-border-radius: 0px 0px;
   -moz-border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
   border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
-  margin-left: 15px;
+  margin-left: -15px;
   background: #f7f7f7;
-  width: 450px;
   height: 460px;
   padding: 40px;
   padding-left: 55px;
 }
-/* line 229, ../../build/sass/main.scss */
+/* line 247, ../../build/sass/main.scss */
 .content .side-column .post-description h4 {
   font-weight: 300;
   line-height: 190%;
 }
 
-/* line 240, ../../build/sass/main.scss */
+/* line 258, ../../build/sass/main.scss */
 footer {
   height: 80px;
   background: #f7f7f7;
   padding-top: 35px;
 }
-/* line 245, ../../build/sass/main.scss */
+/* line 263, ../../build/sass/main.scss */
 footer .footer-links {
   margin-left: 30px;
 }

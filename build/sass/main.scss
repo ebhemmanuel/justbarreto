@@ -35,24 +35,15 @@ without having to write out the text inside, or all the : and ;
 }
 
 // Fonts
-
-@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
-  @font-face {
-    font-family: $font-family;
-      src: url('#{$file-path}.eot');
-      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-           url('#{$file-path}.woff') format('woff'),
-           url('#{$file-path}.ttf') format('truetype'),
-           url('#{$file-path}.svg##{$font-family}') format('svg');
-    font-weight: $font-weight;
-    font-style: $font-style;
-  }
-}
-
-@include font-face("karlaitalic",
-										url('public/fonts/karla/karla-regular-webfont'),
-										normal,
-										normal);
+// @include font-face("Blooming Grove",
+// 										font-files("examples/bgrove.ttf",
+// 															 "examples/bgrove.otf")
+// 										);
+// @include font-face($name,
+// 									 $font-files,
+// 									 $eot,
+// 									 $weight,
+// 									 $style);
 
 // Colors
 $black          		: #262626;
@@ -63,11 +54,14 @@ $cyan           		: #78FDFF;
 
 // Colors by name
 	// Header
+$header-img         : url(../images/header.jpg);
 $header-bg 					: $black;
-$header-text				: $cyan;
+$header-text				: $white;
 	// Links
 $link								: $black;
 $link-hover         : $grey;
+$button-border      : $white;
+$button-text-color  : $white;
 	// Sub-Header
 $sub-header-bg      : $white;
 	// Content
@@ -92,13 +86,14 @@ $side-padding-l     : 55px;
 $footer-padding     : 35px;
 $footer-margin-left : 30px;
 // Sizing Big Header
-	$name-margin-top  : 275px; // Big   View
-	$header-height    : 360px; // Big    View
-	$sub-header-height: 220px; // Medium View
+	// $name-margin-top  : 275px; // Big   View
+	$name-margin-top  : 220px; // Big   View
+	$header-height    : 680px; // Big    View
+	// $sub-header-height: 220px; // Medium View
 // Sizing Small Header
 	// $name-margin-top    : 6px;     // Small View
 	// $header-height    	: 90px;   // Small  View
-	// $sub-header-height	: 60px;   // Small  View
+	$sub-header-height	: 60px;   // Small  View
 // Sizing | Height & Width
 
 	// Button
@@ -107,7 +102,7 @@ $button-height      : 30px;
 $button-width       : 100px;
 $button-padding     : 7px;
 	// Thumbnail
-$thumbnail-height   : 460px;
+$thumbnail-height   : 760px;
 $thumbnail-width    : 670px;
 	// Border
 $border-thumbnail   : 6px;
@@ -145,8 +140,8 @@ a{
   width             : $button-width;
   background        : transparent;
   font-size         : $button-font-size;
-  border            : 1px solid $black;
-  color             : $black;
+  border            : 1px solid $button-border;
+  color             : $button-text-color;
   margin-left       : -3px;
   font-weight       : $light;
   padding-top       : $button-padding;
@@ -154,6 +149,7 @@ a{
   &:hover{
     background      : $black;
     color           : $white;
+    border            : 1px solid $black;
   }
 }
 
@@ -176,27 +172,44 @@ a{
 
 .header{
 	background  			: $header-bg;
-	// background        : url(../images/cover-compressor.jpeg)  no-repeat center center;
-	// @include background-size(cover);
+	background        : $header-img  no-repeat center center;
+	@include background-size(cover);
 	height  					: $header-height;
 	.name{
+		// letter-spacing  : $slight;
 		margin-top      : $name-margin-top;
 		margin-left     : $name-margin-left;
-		color           : $cyan;
+		color           : $header-text;
 		h1{
-
-			font-size     : 48px;
+			@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+			font-family   : "Karla";
+			font-size     : 40px;
 			font-weight   : $lighter;
 			letter-spacing: $slight;
+		}
+	}
+	.contact {
+		display         : none;
+		margin-top      : 50px;
+		a{
+			@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+			font-family   : "Karla";
+			font-weight   : 300;
+			letter-spacing: $normal;
+			color         : orange;
+			&:hover{
+				text-decoration: none;
+			}
 		}
 	}
 }
 
 .sub-header{
-	// margin-top        : $title-margin-top;
+	display           : none;
 	height            : $sub-header-height;
 	background        : $sub-header-bg;
 	.title{
+
 		margin-top      : $title-margin-top;
 	}
 }
@@ -209,19 +222,24 @@ a{
 		padding-top     : $content-padding;
 	}
 	padding-bottom    : $content-padding;
-	padding-right     : $content-padding;
 	.thumbnail-post{
-		height          : $thumbnail-height;
-		width           : $thumbnail-width;
+
+		img{
+			width         : 100%;
+			max-height    : $thumbnail-height;
+			height        : 100%;
+		}
+
+		// width           : $thumbnail-width;
 		// background      : url(../images/titan-prev.jpg)  no-repeat center center;
 		img{@include border-radius($border-thumbnail 0px 0px $border-thumbnail, $border-thumbnail 0px 0px $border-thumbnail);}
 	} // end of .thumbnail-post
 	.side-column{
 		@include border-radius(0px $border-thumbnail $border-thumbnail 0px, 0px $border-thumbnail $border-thumbnail 0px);
-		margin-left     : 15px;
+		margin-left     : -15px;
 		background      : $side-column-bg;
 		// margin-top      : $side-margin-top;
-		width           : $side-column-width;
+		// width           : $side-column-width;
 		height          : $side-column-height;
 		padding         : $side-padding ;
 		padding-left    : $side-padding-l;
