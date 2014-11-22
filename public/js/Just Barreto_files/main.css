@@ -1,0 +1,169 @@
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/
+/* line 124, ../../build/sass/main.scss */
+a {
+  color: #262626;
+}
+/* line 126, ../../build/sass/main.scss */
+a:hover {
+  text-decoration: none;
+  color: #666666;
+}
+
+/* line 131, ../../build/sass/main.scss */
+.contact-style {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* line 136, ../../build/sass/main.scss */
+.button-contact, .button-resume {
+  transition: background .2s ease, color 0.2s ease;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  height: 30px;
+  width: 100px;
+  background: transparent;
+  font-size: 14px;
+  border: 1px solid #f7f7f7;
+  color: #f7f7f7;
+  margin-left: -3px;
+  padding-top: 7px;
+  cursor: pointer;
+}
+/* line 149, ../../build/sass/main.scss */
+.button-contact:hover, .button-resume:hover {
+  background: #262626;
+  color: #f7f7f7;
+  border: 1px solid #262626;
+}
+
+/* line 156, ../../build/sass/main.scss */
+.button-contact {
+  width: 105px;
+}
+
+/* line 166, ../../build/sass/main.scss */
+.post-divider {
+  padding-bottom: 40px;
+  height: 2px;
+}
+
+/* line 173, ../../build/sass/main.scss */
+.header {
+  background: #262626;
+  background: url(../images/header.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 560px;
+}
+/* line 178, ../../build/sass/main.scss */
+.header .name {
+  margin-top: 160px;
+  margin-left: -15px;
+  color: #f7f7f7;
+}
+/* line 183, ../../build/sass/main.scss */
+.header .name h1 {
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
+}
+
+  font-family: "Karla";
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 3.5px;
+}
+/* line 191, ../../build/sass/main.scss */
+.header .contact {
+  display: none;
+  margin-top: 50px;
+}
+/* line 194, ../../build/sass/main.scss */
+.header .contact a {
+  @font-face {
+    font-family: "Montserrat";
+    src: "/fonts/Montserrat/Montserrat-Regular.ttf";
+}
+
+  font-family: "Montserrat";
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: orange;
+}
+/* line 200, ../../build/sass/main.scss */
+.header .contact a:hover {
+  text-decoration: none;
+}
+
+/* line 207, ../../build/sass/main.scss */
+.sub-header {
+  display: none;
+  height: 60px;
+  background: #f7f7f7;
+}
+/* line 211, ../../build/sass/main.scss */
+.sub-header .title {
+  margin-top: 6px;
+}
+
+/* line 219, ../../build/sass/main.scss */
+.content {
+  background: #ececec;
+  padding-bottom: 80px;
+}
+/* line 221, ../../build/sass/main.scss */
+.content .section {
+  padding-top: 80px;
+}
+/* line 227, ../../build/sass/main.scss */
+.content .thumbnail-post img {
+  width: 100%;
+  max-height: 760px;
+  height: 100%;
+}
+/* line 235, ../../build/sass/main.scss */
+.content .thumbnail-post img {
+  -webkit-border-radius: 6px 6px;
+  -moz-border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
+  border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
+}
+/* line 237, ../../build/sass/main.scss */
+.content .side-column {
+  -webkit-border-radius: 0px 0px;
+  -moz-border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
+  border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
+  margin-left: -15px;
+  background: #f7f7f7;
+  height: 460px;
+  padding: 40px;
+  padding-left: 55px;
+}
+/* line 247, ../../build/sass/main.scss */
+.content .side-column .post-description h4 {
+  font-weight: 300;
+  line-height: 190%;
+}
+
+/* line 258, ../../build/sass/main.scss */
+footer {
+  height: 80px;
+  background: #f7f7f7;
+  padding-top: 35px;
+}
+/* line 263, ../../build/sass/main.scss */
+footer .footer-links {
+  margin-left: 30px;
+}

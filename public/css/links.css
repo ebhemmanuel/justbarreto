@@ -1,0 +1,236 @@
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/
+/* line 135, ../../build/sass/links.scss */
+a {
+  color: #88ffeb;
+  transition: background .2s ease, color 0.2s ease;
+  transition: all .2s ease-in-out;
+}
+/* line 138, ../../build/sass/links.scss */
+a:hover {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
+/* line 144, ../../build/sass/links.scss */
+.divider {
+  margin-bottom: -20px;
+  background: #cca34b;
+  height: 2px;
+}
+
+/* line 151, ../../build/sass/links.scss */
+body {
+  height: 100%;
+  background: #f7f7f7;
+}
+
+/* line 156, ../../build/sass/links.scss */
+.welcome {
+  z-index: 2;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 164, ../../build/sass/links.scss */
+.message {
+  opacity: 0;
+  margin-top: 25%;
+}
+/* line 167, ../../build/sass/links.scss */
+.message h3 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
+}
+
+  font-weight: lighter;
+  font-size: 48px;
+  letter-spacing: 3.5px;
+  color: #ececec;
+}
+/* line 175, ../../build/sass/links.scss */
+.message p {
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
+}
+
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 3.5px;
+  color: #ececec;
+}
+
+/* line 184, ../../build/sass/links.scss */
+.content {
+  display: none;
+  height: 100%;
+  background: #f7f7f7;
+  margin-top: 22px;
+}
+
+/* line 191, ../../build/sass/links.scss */
+.nav {
+  display: block;
+  z-index: 3;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  margin-bottom: -20px;
+  height: 380px;
+  background: #88ffeb;
+}
+/* line 202, ../../build/sass/links.scss */
+.nav .nav-links {
+  opacity: 0;
+  float: left;
+  margin-top: 145%;
+  margin-left: -160px;
+  list-style: none;
+}
+/* line 209, ../../build/sass/links.scss */
+.nav .nav-links .current {
+  transition: background .2s ease, color 0.2s ease;
+  transition: all .2s ease-in-out;
+  background: #f7f7f7;
+  color: #ff9748;
+}
+/* line 210, ../../build/sass/links.scss */
+.nav .nav-links .current a {
+  background: #f7f7f7;
+}
+/* line 215, ../../build/sass/links.scss */
+.nav .nav-links a {
+  transition: background .2s ease, color 0.2s ease;
+  transition: all .2s ease-in-out;
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 77px;
+  width: 120%;
+  background: #7febd8;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+/* line 229, ../../build/sass/links.scss */
+.nav .nav-links a:hover {
+  background: #76decc;
+}
+/* line 233, ../../build/sass/links.scss */
+.nav .nav-links a:active, .nav .nav-links a:focus {
+  text-decoration: none;
+  background: #f7f7f7;
+  color: #ff9748;
+}
+/* line 240, ../../build/sass/links.scss */
+.nav .nav-links a:visited {
+  text-decoration: none;
+}
+
+/* line 249, ../../build/sass/links.scss */
+.scale-down {
+  font-size: 2px;
+}
+
+/* line 253, ../../build/sass/links.scss */
+.title {
+  z-index: 2;
+  opacity: 0;
+  transition: background .2s ease, color 0.2s ease;
+  transition: all .2s ease-in-out;
+  margin-bottom: -20px;
+  height: 130px;
+  background: #ececec;
+  cursor: pointer;
+}
+/* line 262, ../../build/sass/links.scss */
+.title:hover {
+  background: #666666;
+  color: #ececec;
+  transform: scale(1.05);
+}
+
+/* line 270, ../../build/sass/links.scss */
+h1 .vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 275, ../../build/sass/links.scss */
+h1 {
+  color: #666666;
+}
+
+/* line 281, ../../build/sass/links.scss */
+.parts {
+  z-index: 1;
+  min-height: 100%;
+  margin-top: 200px;
+}
+/* line 287, ../../build/sass/links.scss */
+.parts ul {
+  list-style: none;
+}
+/* line 290, ../../build/sass/links.scss */
+.parts ul li a {
+  display: block;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  font-size: 35px;
+  letter-spacing: 3.5px;
+  padding-top: 110px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background: #25cc81;
+  width: 260px;
+  height: 260px;
+}
+/* line 302, ../../build/sass/links.scss */
+.parts ul li a:hover {
+  transform: scale(1.1);
+  background: #20b06f;
+}
+
+/* line 315, ../../build/sass/links.scss */
+.footer {
+  display: none;
+  height: 80px;
+  background: #ececec;
+  padding-top: 35px;
+}
+/* line 320, ../../build/sass/links.scss */
+.footer a {
+  transition: background .2s ease, color 0.2s ease;
+  transition: all .2s ease-in-out;
+}
+/* line 322, ../../build/sass/links.scss */
+.footer a:hover {
+  color: #262626;
+}
+/* line 327, ../../build/sass/links.scss */
+.footer .footer-links {
+  margin-left: 30px;
+}

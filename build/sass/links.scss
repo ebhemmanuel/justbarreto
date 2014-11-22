@@ -1,0 +1,375 @@
+// Globals
+@import 'compass/css3';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+
+// Mixins
+
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/
+
+@mixin vertical-align {
+  position          : relative;
+  top               : 50%;
+  -webkit-transform : translateY(-50%);
+  -ms-transform     : translateY(-50%);
+  transform         : translateY(-50%);
+}
+
+@mixin tech-used($name,$color){
+	.#{$name}{
+		@extend %button;
+		border    			: 6px solid $color;
+		font-color  		: $color;
+	}
+}
+
+@mixin generate-box ($class, $width, $height) {
+    .#{$class} { width: $width; height: $height; }
+}
+
+@mixin my-transition{
+	transition        : background .2s ease, color 0.2s ease;
+	transition   			: all .2s ease-in-out;
+}
+
+@mixin transition-mix($type, $time, $method ){
+	transition        : $type $time $method;
+}
+
+// Fonts
+// @include font-face("Blooming Grove",
+// 										font-files("examples/bgrove.ttf",
+// 															 "examples/bgrove.otf")
+// 										);
+// @include font-face($name,
+// 									 $font-files,
+// 									 $eot,
+// 									 $weight,
+// 									 $style);
+
+// Colors
+$orange             : #FF9748;
+$yellow             : #CCA34B;
+$brown							: #998968;
+$green              : #25CC81;
+$dark-green					: #20B06F;
+$black          		: #262626;
+$white          		: #F7F7F7;
+$grey               : #666666;
+$light-grey     		: #ECECEC;
+$cyan           		: #88FFEB;
+$dark-cyan          : #76DECC;
+$medium-cyan        : #7FEBD8;
+
+// Colors by name
+	// Header
+$header-img         : url(../images/header.jpg);
+$header-bg 					: $black;
+$header-text				: $white;
+	// Links
+$link								: $cyan;
+$link-hover         : $white;
+$button-border      : $white;
+$button-text-color  : $white;
+	// nav
+$nav-bg      				: $cyan;
+$nav-color          : $grey;
+	// Content
+$body-bg						: $white;
+$title-bg						: $light-grey;
+$title-color        : $grey;
+$parts-bg						: $green;
+	// Footer
+$footer-bg          : $light-grey;
+
+// Margins
+	// Nav
+$nav-padding-top    : 80px;
+ 	// Title
+$title-margin-top   : 6px;
+	// Parts
+$parts-margin  			: 40px;
+	// Footer
+$footer-padding     : 35px;
+$footer-margin-left : 30px;
+
+// Sizing | Height & Width
+// Nav
+$nav-height					: 380px;
+// Title
+$title-height       : 130px;
+	// Button
+$button-font-size   : 14px;
+$button-height      : 30px;
+$button-width       : 100px;
+$button-padding     : 7px;
+	// Thumbnail
+$thumbnail-height   : 760px;
+$thumbnail-width    : 670px;
+	// Border
+$border-thumbnail   : 6px;
+$border-button      : 20px;
+$footer-height      : 80px;
+
+// Font weight
+$light              : 300;
+$lighter            : lighter;
+
+// Font Spacing
+$slight             : 3.5px;
+$normal             : 2px;
+
+//Font Size
+$message-font-size      : 48px;
+// Link format
+.hide{
+// display             : none;
+}
+a{
+	color             : $link;
+	@include my-transition;
+	&:hover{
+		text-decoration : none;
+		color           : $link-hover;
+	}
+}
+
+.divider{
+	margin-bottom     : -20px;
+	background        : $yellow;
+	height            : 2px;
+}
+
+
+body{
+	height            : 100%;
+	background        : $body-bg;
+}
+
+.welcome{
+	z-index           : 2;
+	overflow          : hidden;
+	position          : absolute;
+	height            : 100%;
+	width             : 100%;
+}
+
+.message{
+	opacity           : 0;
+	margin-top        : 25%;
+	h3{
+		@include vertical-align;
+		@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+		font-weight     : $lighter;
+		font-size       : $message-font-size;
+		letter-spacing  : $slight;
+		color           : $light-grey;
+	}
+	p{
+		@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+		font-weight     : $lighter;
+		font-size       : 20px;
+		letter-spacing  : $slight;
+		color           : $light-grey;
+	}
+}
+
+.content{
+	display           : none;
+	height            : 100%;
+	background        : $white;
+	margin-top        : 22px;
+}
+
+.nav{
+	display           : block;
+	z-index           : 3;
+	overflow          : hidden;
+	position          : absolute;
+	width             : 100%;
+	opacity           : 0;
+	margin-bottom     : -20px;
+	height            : $nav-height;
+	// padding-top       : $nav-padding-top;
+	background        : $nav-bg;
+	.nav-links{
+		opacity         : 0;
+		float           : left;
+		// margin-left     : -162px;
+		margin-top      : 145%;
+		margin-left     : -160px;
+		list-style      : none;
+		.current{
+			a{background: $white;}
+				@include my-transition;
+				background  : $white;
+				color       : $orange;
+			}
+		a{
+			@include my-transition;
+			display       : block;
+			margin-bottom : 20px;
+			padding-bottom: 20px;
+			padding-top   : 20px;
+			padding-right : 77px;
+			width         : 120%;;
+			background    : $medium-cyan;
+			font-size     : 18px;
+			font-weight   : $lighter;
+			letter-spacing: $normal;
+
+
+			&:hover{
+				background      : $dark-cyan;
+				// color     			: $light-grey;
+			}
+			&:active, &:focus, {
+				text-decoration: none;
+				// transform       : scale(1.1);
+				background  : $white;
+				color       : $orange;
+
+			}
+			&:visited{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+
+.scale-down{
+	font-size: 2px;
+}
+
+.title{
+	z-index           : 2;
+	opacity           : 0;
+	@include my-transition;
+	margin-bottom     : -20px;
+	// padding-top       : 30px;
+	height            : $title-height;
+	background        : $title-bg;
+	cursor            : pointer;
+	&:hover{
+		background      : $grey;
+		color     			: $light-grey;
+		transform       : scale(1.05);
+	}
+}
+
+h1{
+	.vertical-align {
+		@include vertical-align;
+	}
+}
+
+h1{
+		color           : $title-color;
+	}
+
+
+
+.parts{
+	z-index              : 1;
+	min-height           : 100%;
+	margin-top           : 200px;
+	// padding-top       : 80px;
+	// padding-bottom    : 80px;
+	ul{
+		list-style      : none;
+		li{
+			a{
+				display       : block;
+				@include border-radius(12px);
+				font-size     : 35px;
+				// font-weight   : $light;
+				letter-spacing: $slight;
+				padding-top   : 110px;
+				margin-right  : $parts-margin;
+				margin-bottom : $parts-margin;
+				background    : $parts-bg;
+				width         : 260px;
+				height        : 260px;
+				&:hover{
+					transform   : scale(1.1);
+					background  : $dark-green;
+				}
+			}
+		}
+	}
+}
+
+
+
+// Footer
+
+.footer{
+	display           :none;
+	height            : $footer-height;
+	background        : $footer-bg;
+	padding-top       : $footer-padding;
+	a{
+		@include my-transition;
+		&:hover{
+			color         : $black;
+		}
+	}
+
+	.footer-links{
+		margin-left     : $footer-margin-left;
+	}
+}
+
+// Add-Ons
+
+%button{
+  @include my-transition;
+  @include border-radius($border-button);
+  height            : $button-height;
+  width             : $button-width;
+  background        : transparent;
+  font-size         : $button-font-size;
+  border            : 1px solid $button-border;
+  color             : $button-text-color;
+  margin-left       : -3px;
+  // font-weight       : $light;
+  padding-top       : $button-padding;
+  cursor            : pointer;
+  &:hover{
+    background      : $black;
+    color           : $white;
+    border            : 1px solid $black;
+  }
+}
+
+// .contact {
+	// 	display         : none;
+	// 	margin-top      : 50px;
+	// 	a{
+	// 		@include font-face("Montserrat","/fonts/Montserrat/Montserrat-Regular.ttf");
+	// 		font-family   : "Montserrat";
+	// 		font-weight   : 300;
+	// 		letter-spacing: $normal;
+	// 		color         : orange;
+	// 		&:hover{
+	// 			text-decoration: none;
+	// 		}
+	// 	}
+	// }
+
+
+
+
+
+
+
+
