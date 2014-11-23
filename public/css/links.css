@@ -6,6 +6,11 @@ without having to write out the text inside, or all the : and ;
 @include tech-used (.illustrator,$orange,1px);
 @include tech-used (.git,$purple,1px);
 */
+/* line 132, ../../build/sass/links.scss */
+.hide {
+  display: none;
+}
+
 /* line 135, ../../build/sass/links.scss */
 a {
   color: #88ffeb;
@@ -26,7 +31,7 @@ a:hover {
 }
 
 /* line 151, ../../build/sass/links.scss */
-body {
+html, body {
   height: 100%;
   background: #f7f7f7;
 }
@@ -36,16 +41,17 @@ body {
   z-index: 2;
   overflow: hidden;
   position: absolute;
+  margin-left: 5%;
   height: 100%;
   width: 100%;
 }
 
-/* line 164, ../../build/sass/links.scss */
+/* line 165, ../../build/sass/links.scss */
 .message {
   opacity: 0;
   margin-top: 25%;
 }
-/* line 167, ../../build/sass/links.scss */
+/* line 168, ../../build/sass/links.scss */
 .message h3 {
   position: relative;
   top: 50%;
@@ -62,7 +68,7 @@ body {
   letter-spacing: 3.5px;
   color: #ececec;
 }
-/* line 175, ../../build/sass/links.scss */
+/* line 176, ../../build/sass/links.scss */
 .message p {
   @font-face {
     font-family: "Karla";
@@ -75,46 +81,71 @@ body {
   color: #ececec;
 }
 
-/* line 184, ../../build/sass/links.scss */
+/* line 185, ../../build/sass/links.scss */
 .content {
-  display: none;
   height: 100%;
   background: #f7f7f7;
-  margin-top: 22px;
+}
+/* line 191, ../../build/sass/links.scss */
+.content .upload h3 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  @font-face {
+    font-family: "Karla";
+    src: "/fonts/karla/karla-regular.ttf";
 }
 
-/* line 191, ../../build/sass/links.scss */
+  font-weight: lighter;
+  font-size: 48px;
+  letter-spacing: 3.5px;
+  color: #ececec;
+  margin-top: -140px;
+  margin-left: -160px;
+}
+
+/* line 204, ../../build/sass/links.scss */
 .nav {
   display: block;
   z-index: 3;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   width: 100%;
   opacity: 0;
   margin-bottom: -20px;
-  height: 380px;
+  height: 100%;
   background: #88ffeb;
 }
-/* line 202, ../../build/sass/links.scss */
+/* line 216, ../../build/sass/links.scss */
+.nav h4 {
+  opacity: 0;
+  padding-top: 30px;
+  font-weight: 300;
+  color: #7febd8;
+  margin-bottom: -30px;
+}
+/* line 222, ../../build/sass/links.scss */
 .nav .nav-links {
   opacity: 0;
   float: left;
   margin-top: 145%;
-  margin-left: -160px;
+  margin-left: 160px;
   list-style: none;
 }
-/* line 209, ../../build/sass/links.scss */
+/* line 229, ../../build/sass/links.scss */
 .nav .nav-links .current {
   transition: background .2s ease, color 0.2s ease;
   transition: all .2s ease-in-out;
   background: #f7f7f7;
   color: #ff9748;
 }
-/* line 210, ../../build/sass/links.scss */
+/* line 230, ../../build/sass/links.scss */
 .nav .nav-links .current a {
   background: #f7f7f7;
 }
-/* line 215, ../../build/sass/links.scss */
+/* line 235, ../../build/sass/links.scss */
 .nav .nav-links a {
   transition: background .2s ease, color 0.2s ease;
   transition: all .2s ease-in-out;
@@ -129,45 +160,27 @@ body {
   font-weight: lighter;
   letter-spacing: 2px;
 }
-/* line 229, ../../build/sass/links.scss */
+/* line 247, ../../build/sass/links.scss */
 .nav .nav-links a:hover {
   background: #76decc;
 }
-/* line 233, ../../build/sass/links.scss */
+/* line 251, ../../build/sass/links.scss */
 .nav .nav-links a:active, .nav .nav-links a:focus {
   text-decoration: none;
   background: #f7f7f7;
   color: #ff9748;
 }
-/* line 240, ../../build/sass/links.scss */
+/* line 257, ../../build/sass/links.scss */
 .nav .nav-links a:visited {
   text-decoration: none;
 }
 
-/* line 249, ../../build/sass/links.scss */
+/* line 266, ../../build/sass/links.scss */
 .scale-down {
   font-size: 2px;
 }
 
-/* line 253, ../../build/sass/links.scss */
-.title {
-  z-index: 2;
-  opacity: 0;
-  transition: background .2s ease, color 0.2s ease;
-  transition: all .2s ease-in-out;
-  margin-bottom: -20px;
-  height: 130px;
-  background: #ececec;
-  cursor: pointer;
-}
-/* line 262, ../../build/sass/links.scss */
-.title:hover {
-  background: #666666;
-  color: #ececec;
-  transform: scale(1.05);
-}
-
-/* line 270, ../../build/sass/links.scss */
+/* line 273, ../../build/sass/links.scss */
 h1 .vertical-align {
   position: relative;
   top: 50%;
@@ -176,22 +189,25 @@ h1 .vertical-align {
   transform: translateY(-50%);
 }
 
-/* line 275, ../../build/sass/links.scss */
+/* line 278, ../../build/sass/links.scss */
 h1 {
   color: #666666;
 }
 
-/* line 281, ../../build/sass/links.scss */
+/* line 284, ../../build/sass/links.scss */
 .parts {
+  opacity: 0;
   z-index: 1;
-  min-height: 100%;
-  margin-top: 200px;
+  height: 100%;
+  height: 800px;
+  margin-top: 80px;
+  margin-left: 250px;
 }
-/* line 287, ../../build/sass/links.scss */
+/* line 291, ../../build/sass/links.scss */
 .parts ul {
   list-style: none;
 }
-/* line 290, ../../build/sass/links.scss */
+/* line 294, ../../build/sass/links.scss */
 .parts ul li a {
   display: block;
   -webkit-border-radius: 12px;
@@ -199,38 +215,48 @@ h1 {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   border-radius: 12px;
-  font-size: 35px;
+  font-size: 28px;
   letter-spacing: 3.5px;
-  padding-top: 110px;
   margin-right: 40px;
   margin-bottom: 40px;
-  background: #25cc81;
-  width: 260px;
-  height: 260px;
+  background: #76decc;
+  padding-top: 90px;
+  width: 220px;
+  height: 220px;
 }
-/* line 302, ../../build/sass/links.scss */
+/* line 306, ../../build/sass/links.scss */
 .parts ul li a:hover {
   transform: scale(1.1);
-  background: #20b06f;
+  background: #ff9748;
+}
+/* line 310, ../../build/sass/links.scss */
+.parts ul li a:active, .parts ul li a:focus {
+  text-decoration: none;
+  background: #ff9748;
+  color: #f7f7f7;
+}
+/* line 315, ../../build/sass/links.scss */
+.parts ul li a:visited {
+  text-decoration: none;
 }
 
-/* line 315, ../../build/sass/links.scss */
+/* line 328, ../../build/sass/links.scss */
 .footer {
   display: none;
   height: 80px;
   background: #ececec;
   padding-top: 35px;
 }
-/* line 320, ../../build/sass/links.scss */
+/* line 333, ../../build/sass/links.scss */
 .footer a {
   transition: background .2s ease, color 0.2s ease;
   transition: all .2s ease-in-out;
 }
-/* line 322, ../../build/sass/links.scss */
+/* line 335, ../../build/sass/links.scss */
 .footer a:hover {
   color: #262626;
 }
-/* line 327, ../../build/sass/links.scss */
+/* line 340, ../../build/sass/links.scss */
 .footer .footer-links {
   margin-left: 30px;
 }

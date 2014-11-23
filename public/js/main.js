@@ -19,6 +19,10 @@ var con  = $(".contact");
 	var nav 					= $(".nav");
 	var navLinks			= $(".nav-links");
 	var navLinksAnchors = $('.nav-links li');
+	var ga            = $("#game-a");
+	var gb            = $("#game-b");
+	var logo          = $(".nav h4");
+	var parts         = $(".parts");
 	var navHeight			= $(".nav").height()+80;
 	var content       = $(".content");
 	var titles        = $(".title");
@@ -44,7 +48,9 @@ var con  = $(".contact");
 	// console.log($(window).height());
 	// console.log(titleHeight);
 
-	function flicker(target, delay){
+	// parts.height(height);
+
+	function flickerOut(target, delay){
 		target.delay(delay)
  				 .animate({opacity:0},25)
  				 .animate({opacity:1},25)
@@ -56,65 +62,112 @@ var con  = $(".contact");
  				 // .fadeOut(250);
  	};
 
+function flickerIn(target){
+		target.animate({opacity:0},25)
+ 				 	.animate({opacity:1},25)
+ 				 	.animate({opacity:0},30)
+ 				 	.animate({opacity:1},30)
+ 				 	.animate({opacity:0},30)
+ 				 	.animate({opacity:1},30)
+ 				 	.fadeIn(750);
+ 				 // .fadeOut(250);
+ 	};
+
+ 	// When you click a link it fades away the intro message.
+
+ 	$("a").click(function(e){
+		// e.preventDefault();
+		flickerOut(message,0);
+		welcome.css("display","block").delay(1200).fadeOut(800);
+	});
+
+	// $(".parts a").each(function(e){
+	// 	this.click(function(){
+	// 		this.hide();
+	// 		console.log("hmm");
+	// 	});
+	// });
+
+	// Makes the links stay active
+	$(".nav-links a").click(function (e) {
+		e.preventDefault();
+	$(".nav-links a").addClass("current")
+								   .not(this)
+								   .removeClass("current");
+	 });
+
+
+
+	ga.click(function(e){
+
+		gameA.stop(true, false)
+		     .animate({opacity:1},1200)
+				 .removeClass('hide');
+		gameB.stop(true, false)
+		     .addClass('hide')
+		     .animate({opacity:0},800);
+
+		// if(message.css()==message.css("display","block")){
+		// 	gameA.stop(true, false)
+		// 		   .delay(700)
+		//        .animate({opacity:1},1200)
+		// 		   .removeClass('hide');
+		// 	gameB.stop(true, false)
+		//        .addClass('hide')
+		//        .animate({opacity:0},800);
+		// }
+		// else{
+		// 	gameA.stop(true, false)
+		//        .animate({opacity:1},1200)
+		// 		   .removeClass('hide');
+		// 	gameB.stop(true, false)
+		//        .addClass('hide')
+		//        .animate({opacity:0},800);
+		// }
+
+	});
+	gb.click(function(e){
+		gameB.stop(true, false)
+				 .animate({opacity:1},1200)
+				 .removeClass('hide');
+		gameA.stop(true, false)
+		     .addClass('hide')
+				 .animate({opacity:0},800);
+	});
+
+	// shadow.click(function (e) {
+	// 	e.preventDefault();
+	// 	gameB.addClass("hide")
+	// 			 .not(this)
+	// 			 .removeClass("hide");
+	//  });
+
+
+
 	content.css("padding-bottom", "0px");
-	gameAText.css("opacity","0");
-	gameBText.css("opacity","0");
-	nav.css("height",myHeight+18);
+	gameA.css("opacity","0");
+	gameB.css("opacity","0");
+	// nav.css("height",myHeight+18);
 	message.css("height", messageHeight);
+
 	nav.animate({opacity:1}, 700)
 		 .delay(300)
 		 .animate({width:200},1000, "easeOutExpo");
-		 // .animate({height:340},1000, "easeOutExpo");
+
 	message.delay(1900)
  				 .animate({opacity:1, "margin-top":"22%"},900, "easeOutExpo");
-$("a").click(function(e){
-		e.preventDefault();
-		flicker(welcome,0);
-});
+
 
  	navLinks.delay(2300)
  					.animate({display:"block", "margin-left":"0px", opacity:1},700, "easeOutQuart");
 
-$(".nav-links a").click(function (e) {
-e.preventDefault();
-$(".nav-links a").addClass("current")
-								 .not(this)
-								 .removeClass("current");
-});
- 	// navLinksAnchors.click(function(){
-  //   navLinksAnchors.removeClass('current').css("background", "#7FEBD8");
-  //   $(this).addClass('current').css("background","#F7F7F7");
-  // });
-  // $("a").mouseover(function(event) {
-  // 	if
-  // 		($(this).css!=$(this).css("background","#F7F7F7"))
-  // 	{
-  // 		$(this).css("background", "#76DECC");
-  // 		console.log("This does not equal.");
-  // 	}
-  // 	else if
-  // 		($(this).css==$(this).css("background","#F7F7F7"))
-  // 	{
-  // 		$(this).css("background","#F7F7F7")
-  // 	}
-  // });
+
+	logo.delay(2300)
+			.animate({opacity:1},400);
 
 	content.css("height","0px")
  							 .delay(1000)
  							 .animate({height:height},1800);
- 	gameA.height(0)
- 				 .animate({opacity:1},1400)
- 				 .animate({height:130},800);
- 	gameB.height(0)
- 				 .animate({opacity:1},1400)
- 				 .animate({height:130},800);
- 	gameAText.animate({top:"45%"},600)
- 						 .delay(1990)
- 						 .animate({opacity:1},600);
- 	gameBText.animate({top:"45%"},600)
- 						 .delay(1990)
- 						 .animate({opacity:1},600);
-
 
  	$(".footer").css("margin-top", "130px")
  							.delay(1200)
@@ -122,13 +175,6 @@ $(".nav-links a").addClass("current")
  		// gameA.click(function(){
  		// 	if
  		// });
-
- 		gameA.click(function(){
- 			gameAContent.toggle(900);
- 		});
- 		gameB.click(function(){
- 			gameBContent.toggle(900);
- 		});
 
 
 	});

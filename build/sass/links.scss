@@ -130,7 +130,7 @@ $normal             : 2px;
 $message-font-size      : 48px;
 // Link format
 .hide{
-// display             : none;
+display             : none;
 }
 a{
 	color             : $link;
@@ -148,7 +148,7 @@ a{
 }
 
 
-body{
+html, body{
 	height            : 100%;
 	background        : $body-bg;
 }
@@ -157,6 +157,7 @@ body{
 	z-index           : 2;
 	overflow          : hidden;
 	position          : absolute;
+	margin-left       : 5%;
 	height            : 100%;
 	width             : 100%;
 }
@@ -182,29 +183,48 @@ body{
 }
 
 .content{
-	display           : none;
+	// display           : none;
 	height            : 100%;
 	background        : $white;
-	margin-top        : 22px;
+	// margin-top        : 22px;
+	.upload{
+		h3{
+			@include vertical-align;
+			@include font-face("Karla","/fonts/karla/karla-regular.ttf");
+			font-weight     : $lighter;
+			font-size       : $message-font-size;
+			letter-spacing  : $slight;
+			color           : $light-grey;
+			margin-top      : -140px;
+			margin-left     : -160px;
+		}
+	}
 }
 
 .nav{
+
 	display           : block;
 	z-index           : 3;
 	overflow          : hidden;
-	position          : absolute;
+	position          : fixed;
 	width             : 100%;
 	opacity           : 0;
 	margin-bottom     : -20px;
-	height            : $nav-height;
+	height            : 100%;
 	// padding-top       : $nav-padding-top;
 	background        : $nav-bg;
+	h4{ opacity       : 0;
+			padding-top   : 30px;
+			font-weight   : $light;
+			color         : $medium-cyan;
+			margin-bottom : -30px;
+		}
 	.nav-links{
 		opacity         : 0;
 		float           : left;
 		// margin-left     : -162px;
 		margin-top      : 145%;
-		margin-left     : -160px;
+		margin-left     : 160px;
 		list-style      : none;
 		.current{
 			a{background: $white;}
@@ -224,8 +244,6 @@ body{
 			font-size     : 18px;
 			font-weight   : $lighter;
 			letter-spacing: $normal;
-
-
 			&:hover{
 				background      : $dark-cyan;
 				// color     			: $light-grey;
@@ -235,7 +253,6 @@ body{
 				// transform       : scale(1.1);
 				background  : $white;
 				color       : $orange;
-
 			}
 			&:visited{
 				text-decoration: none;
@@ -250,21 +267,7 @@ body{
 	font-size: 2px;
 }
 
-.title{
-	z-index           : 2;
-	opacity           : 0;
-	@include my-transition;
-	margin-bottom     : -20px;
-	// padding-top       : 30px;
-	height            : $title-height;
-	background        : $title-bg;
-	cursor            : pointer;
-	&:hover{
-		background      : $grey;
-		color     			: $light-grey;
-		transform       : scale(1.05);
-	}
-}
+
 
 h1{
 	.vertical-align {
@@ -279,29 +282,39 @@ h1{
 
 
 .parts{
+	opacity              : 0;
 	z-index              : 1;
-	min-height           : 100%;
-	margin-top           : 200px;
-	// padding-top       : 80px;
-	// padding-bottom    : 80px;
+	height               : 100%;
+	height               : 800px;
+	margin-top           : 80px;
+	margin-left          : 250px;
 	ul{
 		list-style      : none;
 		li{
 			a{
 				display       : block;
 				@include border-radius(12px);
-				font-size     : 35px;
+				font-size     : 28px;
 				// font-weight   : $light;
 				letter-spacing: $slight;
-				padding-top   : 110px;
 				margin-right  : $parts-margin;
 				margin-bottom : $parts-margin;
-				background    : $parts-bg;
-				width         : 260px;
-				height        : 260px;
+				background    : $dark-cyan;
+				padding-top   : 90px;
+				width         : 220px;
+				height        : 220px;
 				&:hover{
 					transform   : scale(1.1);
-					background  : $dark-green;
+					background  : $orange;
+				}
+				&:active, &:focus, {
+				text-decoration: none;
+				background  : $orange;
+				color       : $white;
+				}
+				&:visited{
+				text-decoration: none;
+				// background  : $light-grey;
 				}
 			}
 		}
@@ -350,6 +363,23 @@ h1{
     border            : 1px solid $black;
   }
 }
+
+// .title{
+// 	z-index           : 2;
+// 	opacity           : 0;
+// 	@include my-transition;
+// 	margin-bottom     : -20px;
+// 	// padding-top       : 30px;
+// 	height            : $title-height;
+// 	background        : $title-bg;
+// 	cursor            : pointer;
+// 	&:hover{
+// 		background      : $grey;
+// 		color     			: $light-grey;
+// 		transform       : scale(1.05);
+// 	}
+// }
+
 
 // .contact {
 	// 	display         : none;
