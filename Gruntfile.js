@@ -69,7 +69,7 @@ module.exports = function (grunt) {
 		grunt.loadNpmTasks('grunt-express');
 
 		// Register our CLI tasks
-		grunt.registerTask('jb', ['compass', 'jade', 'express','watch']);
+		grunt.registerTask('run', ['compass', 'jade', 'express','watch']);
 
 }
 
