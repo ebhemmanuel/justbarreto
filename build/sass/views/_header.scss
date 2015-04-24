@@ -4,3 +4,32 @@ $header-bg 				: $black;
 $header-text			: $cyan;
 	// Sub-Header
 $sub-header-bg       : $white;
+
+// Top Header
+
+.header{
+	background  			: $header-bg;
+	// background        : url(../images/cover-compressor.jpeg)  no-repeat center center;
+	// @include background-size(cover);
+	height  					: $header-height;
+	.name{
+		margin-top      : $name-margin-top;
+		margin-left     : $name-margin-left;
+		color           : $cyan;
+		h1{
+
+			font-size     : 48px;
+			font-weight   : $lighter;
+			letter-spacing: $slight;
+		}
+	}
+}
+
+.sub-header{
+	// margin-top        : $title-margin-top;
+	height            : $sub-header-height;
+	background        : $sub-header-bg;
+	.title{
+		margin-top      : $title-margin-top;
+	}
+}

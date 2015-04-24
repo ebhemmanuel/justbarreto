@@ -13,23 +13,17 @@ without having to write out the text inside, or all the : and ;
   font-weight: normal;
   font-style: normal;
 }
-/* line 11, ../../build/sass/main.scss */
+/* line 8, ../../build/sass/includes/_button.scss */
 a {
   color: #262626;
 }
-/* line 13, ../../build/sass/main.scss */
+/* line 10, ../../build/sass/includes/_button.scss */
 a:hover {
   text-decoration: none;
   color: #666666;
 }
 
-/* line 18, ../../build/sass/main.scss */
-.contact-style {
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-
-/* line 23, ../../build/sass/main.scss */
+/* line 16, ../../build/sass/includes/_button.scss */
 .button-contact, .button-resume {
   transition: background .2s ease, color 0.2s ease;
   -moz-border-radius: 20px;
@@ -46,73 +40,73 @@ a:hover {
   padding-top: 7px;
   cursor: pointer;
 }
-/* line 36, ../../build/sass/main.scss */
+/* line 29, ../../build/sass/includes/_button.scss */
 .button-contact:hover, .button-resume:hover {
   background: #262626;
   color: #F7F7F7;
 }
 
-/* line 42, ../../build/sass/main.scss */
+/* line 37, ../../build/sass/includes/_button.scss */
+.contact-style {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* line 42, ../../build/sass/includes/_button.scss */
 .button-contact {
   width: 105px;
 }
 
-/* line 52, ../../build/sass/main.scss */
-.post-divider {
-  padding-bottom: 40px;
-  height: 2px;
-}
-
-/* line 59, ../../build/sass/main.scss */
+/* line 10, ../../build/sass/views/_header.scss */
 .header {
   background: #262626;
   height: 360px;
 }
-/* line 64, ../../build/sass/main.scss */
+/* line 15, ../../build/sass/views/_header.scss */
 .header .name {
   margin-top: 275px;
   margin-left: -15px;
   color: #78FDFF;
 }
-/* line 68, ../../build/sass/main.scss */
+/* line 19, ../../build/sass/views/_header.scss */
 .header .name h1 {
   font-size: 48px;
   font-weight: lighter;
   letter-spacing: 3.5px;
 }
 
-/* line 77, ../../build/sass/main.scss */
+/* line 28, ../../build/sass/views/_header.scss */
 .sub-header {
   height: 220px;
   background: #F7F7F7;
 }
-/* line 81, ../../build/sass/main.scss */
+/* line 32, ../../build/sass/views/_header.scss */
 .sub-header .title {
   margin-top: 6px;
 }
 
-/* line 88, ../../build/sass/main.scss */
+/* line 3, ../../build/sass/includes/_content.scss */
 .content {
   background: #ECECEC;
   padding-bottom: 80px;
   padding-right: 80px;
 }
-/* line 90, ../../build/sass/main.scss */
+/* line 5, ../../build/sass/includes/_content.scss */
 .content .section {
   padding-top: 80px;
 }
-/* line 95, ../../build/sass/main.scss */
+/* line 10, ../../build/sass/includes/_content.scss */
 .content .thumbnail-post {
   height: 460px;
   width: 670px;
 }
-/* line 99, ../../build/sass/main.scss */
+/* line 14, ../../build/sass/includes/_content.scss */
 .content .thumbnail-post img {
   -moz-border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
   -webkit-border-radius: 6px 6px;
   border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
 }
-/* line 101, ../../build/sass/main.scss */
+/* line 16, ../../build/sass/includes/_content.scss */
 .content .side-column {
   -moz-border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
   -webkit-border-radius: 0px 0px;
@@ -124,19 +118,25 @@ a:hover {
   padding: 40px;
   padding-left: 55px;
 }
-/* line 111, ../../build/sass/main.scss */
+/* line 26, ../../build/sass/includes/_content.scss */
 .content .side-column .post-description h4 {
   font-weight: 300;
   line-height: 190%;
 }
 
-/* line 122, ../../build/sass/main.scss */
+/* line 3, ../../build/sass/includes/_footer.scss */
 footer {
   height: 80px;
   background: #F7F7F7;
   padding-top: 35px;
 }
-/* line 127, ../../build/sass/main.scss */
+/* line 8, ../../build/sass/includes/_footer.scss */
 footer .footer-links {
   margin-left: 30px;
+}
+
+/* line 12, ../../build/sass/main.scss */
+.post-divider {
+  padding-bottom: 40px;
+  height: 2px;
 }
