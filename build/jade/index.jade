@@ -23,9 +23,14 @@ html
 						li
 							| |
 						li
-							a(href="#contact")
-								h4.contact-style.button-contact.text-center
-									| Contact +
+							strong
+								| Get in touch &#8594;
+						li
+							a(href="mailto:ebh.emmanuel@gmail.com" target="_blank") Email
+						li
+							a(href="https://www.linkedin.com/in/justbarreto" target="_blank"). LinkedIn
+						li
+							a(href="https://twitter.com/justbarreto" target="_blank"). Twitter
 						li
 							a(href="download/Barreto_Emmanuel_Resume(online).pdf" target="_blank")
 								h4.contact-style.button-resume.text-center
@@ -104,27 +109,8 @@ html
 					.tech-used
 			.post-divider
 
-		footer.container-fluid
-			.container
-				a(name="contact")#contact
-				.col-lg-4
-					ul.list-inline.text-left
-						li.text-muted &#0169; 2014 Emmanuel Barreto
-				ul.list-inline.col-md-offset-8
-					li
-						strong
-							| Get in touch &#8594;
-					li
-						a(href="mailto:ebh.emmanuel@gmail.com" target="_blank") Email
-					li
-						a(href="https://www.linkedin.com/in/justbarreto" target="_blank"). LinkedIn
-					li
-						a(href="https://twitter.com/justbarreto" target="_blank"). Twitter
+		include footer
+		include js
 
-		script(src="public/js/jquery-1.11.1.min.js")
-		//- script(src="public/js/jquery.smooth-scroll.min.js")
-		script(src="public/js/smooth.pack.js")
-		script(src="public/js/bootstrap.min.js")
-		script(src="public/js/main.js")
 
 
