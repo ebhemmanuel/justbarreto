@@ -1,0 +1,15 @@
+// Globals
+@import 'compass/css3';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'mixins/tools';
+@import 'includes/globals';
+@import 'includes/header';
+@import 'includes/content';
+@import 'includes/footer';
+
+// Additional Elements
+.post-divider{
+		padding-bottom  : 40px;
+		height          : 2px;
+}

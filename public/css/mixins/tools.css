@@ -1,0 +1,8 @@
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/

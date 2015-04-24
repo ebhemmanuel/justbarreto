@@ -1,0 +1,14 @@
+mixin item(href,image,title,desc)
+	.container.section
+		.thumbnail-post.col-lg-4
+			a(href=href target="blank")
+				img(src="public/images/"+image)
+				if image= null
+					image= 'public/images/noimages.jpg'
+		.side-column.col-lg-4
+			.title-post
+				h1= title
+			.post-description
+				h4= desc
+			.tech-used
+	.post-divider

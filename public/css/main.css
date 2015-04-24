@@ -1,0 +1,169 @@
+/*
+This allows me to create the classes of techniques
+without having to write out the text inside, or all the : and ;
+
+@include tech-used (.photoshop,$blue,1px);
+@include tech-used (.illustrator,$orange,1px);
+@include tech-used (.git,$purple,1px);
+*/
+@font-face {
+  font-family: "karlaitalic";
+  src: url('url("public/fonts/karla/karla-regular-webfont").eot');
+  src: url('url("public/fonts/karla/karla-regular-webfont").eot?#iefix') format("embedded-opentype"), url('url("public/fonts/karla/karla-regular-webfont").woff') format("woff"), url('url("public/fonts/karla/karla-regular-webfont").ttf') format("truetype"), url('url("public/fonts/karla/karla-regular-webfont").svg#karlaitalic') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 8, ../../build/sass/includes/_button.scss */
+a {
+  color: #262626;
+}
+/* line 10, ../../build/sass/includes/_button.scss */
+a:hover {
+  text-decoration: none;
+  color: #666666;
+  cursor: pointer;
+}
+
+/* line 17, ../../build/sass/includes/_button.scss */
+.button-contact, .button-resume {
+  transition: background .2s ease, color 0.2s ease;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  height: 30px;
+  width: 100px;
+  background: transparent;
+  font-size: 14px;
+  border: 1px solid #262626;
+  color: #262626;
+  margin-left: -3px;
+  font-weight: 300;
+  padding-top: 7px;
+  cursor: pointer;
+}
+/* line 30, ../../build/sass/includes/_button.scss */
+.button-contact:hover, .button-resume:hover {
+  background: #262626;
+  color: #F7F7F7;
+}
+
+/* line 38, ../../build/sass/includes/_button.scss */
+.contact-style {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* line 43, ../../build/sass/includes/_button.scss */
+.button-contact {
+  width: 105px;
+}
+
+/* line 9, ../../build/sass/includes/_header.scss */
+.avatar {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: url(../images/av.jpeg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 120% 90%;
+  background: #F7F7F7;
+  height: 180px;
+  width: 180px;
+  margin-top: 150px;
+  margin-left: 50px;
+  overflow: hidden;
+}
+
+/* line 23, ../../build/sass/includes/_header.scss */
+.header {
+  background: #262626;
+  background: url(../images/cover_train_over.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 560px;
+}
+/* line 28, ../../build/sass/includes/_header.scss */
+.header .name {
+  margin-top: 342px;
+  color: #F7F7F7;
+}
+/* line 32, ../../build/sass/includes/_header.scss */
+.header .name h1 {
+  font-family: "DOCK11";
+  font-size: 48px;
+  font-weight: lighter;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+/* line 44, ../../build/sass/includes/_header.scss */
+.sub-header {
+  padding-top: 30px;
+  height: 120px;
+  background: #F7F7F7;
+}
+/* line 49, ../../build/sass/includes/_header.scss */
+.sub-header .title {
+  margin-top: 6px;
+}
+
+/* line 3, ../../build/sass/includes/_content.scss */
+.content {
+  background: #ECECEC;
+  padding-bottom: 80px;
+  padding-right: 80px;
+}
+/* line 5, ../../build/sass/includes/_content.scss */
+.content .section {
+  padding-top: 80px;
+}
+/* line 10, ../../build/sass/includes/_content.scss */
+.content .thumbnail-post {
+  height: 460px;
+  width: 670px;
+}
+/* line 14, ../../build/sass/includes/_content.scss */
+.content .thumbnail-post img {
+  -moz-border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
+  -webkit-border-radius: 6px 6px;
+  border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
+}
+/* line 16, ../../build/sass/includes/_content.scss */
+.content .side-column {
+  -moz-border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
+  -webkit-border-radius: 0px 0px;
+  border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
+  margin-left: 15px;
+  background: #F7F7F7;
+  width: 450px;
+  height: 460px;
+  padding: 40px;
+  padding-left: 55px;
+}
+/* line 26, ../../build/sass/includes/_content.scss */
+.content .side-column .post-description h4 {
+  font-weight: 300;
+  line-height: 190%;
+}
+
+/* line 3, ../../build/sass/includes/_footer.scss */
+footer {
+  height: 80px;
+  background: #F7F7F7;
+  padding-top: 35px;
+}
+/* line 8, ../../build/sass/includes/_footer.scss */
+footer .footer-links {
+  margin-left: 30px;
+}
+
+/* line 12, ../../build/sass/main.scss */
+.post-divider {
+  padding-bottom: 40px;
+  height: 2px;
+}
