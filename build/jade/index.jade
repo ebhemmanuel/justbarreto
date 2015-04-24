@@ -1,15 +1,10 @@
 doctype html
 html
 	head
-		title Just Barreto
-		meta(charset="utf-8")
-		meta(description="Mycamera website")
-		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-		link(href="public/css/bootstrap.min.css" type="text/css" rel="stylesheet")
-		link(href="public/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet")
-		link(href="public/css/main.css" type="text/css" rel="stylesheet")
-
+		include includes/meta
+		include mixins/item
 	body
+
 		.header.container-fluid
 			.container
 				.name.col-md-6.col-lg-6
@@ -80,18 +75,12 @@ html
 					.tech-used
 			.post-divider
 
-			.container.section
-				.thumbnail-post.col-lg-4
-					img(src="public/images/amanda.jpg")
-				.side-column.col-lg-4
-					.title-post
-						h1
-							| Amanda Smith Logo
-					.post-description
-						h4.
-								Worked closely with the client to bring together a modern design for her photography services.
-					.tech-used
-			.post-divider
+
+			+item(
+				'public/images/amanda.jpg',
+				'Amanda Smith Logo',
+				'Worked closely with the client to bring together a modern design for her photography services.'
+			)
 
 			.container.section
 				.thumbnail-post.col-lg-4
@@ -109,8 +98,8 @@ html
 					.tech-used
 			.post-divider
 
-		include footer
-		include js
+		include includes/footer
+		include includes/js
 
 
 

@@ -77,10 +77,11 @@ a:hover {
 
 /* line 28, ../../build/sass/views/_header.scss */
 .sub-header {
-  height: 220px;
+  padding-top: 30px;
+  height: 120px;
   background: #F7F7F7;
 }
-/* line 32, ../../build/sass/views/_header.scss */
+/* line 33, ../../build/sass/views/_header.scss */
 .sub-header .title {
   margin-top: 6px;
 }
