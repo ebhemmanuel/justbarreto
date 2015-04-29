@@ -58,6 +58,12 @@ a:hover {
   width: 105px;
 }
 
+/* line 8, ../../build/sass/includes/_globals.scss */
+.post-divider {
+  padding-bottom: 40px;
+  height: 2px;
+}
+
 /* line 9, ../../build/sass/includes/_header.scss */
 .avatar {
   -moz-border-radius: 50%;
@@ -160,10 +166,4 @@ footer {
 /* line 8, ../../build/sass/includes/_footer.scss */
 footer .footer-links {
   margin-left: 30px;
-}
-
-/* line 12, ../../build/sass/main.scss */
-.post-divider {
-  padding-bottom: 40px;
-  height: 2px;
 }
