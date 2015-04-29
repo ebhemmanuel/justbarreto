@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 		watch:{
 
 			css: {
-				files: 'build/sass/**/*.scss', // look in public sass, and within any sub directory for any scss
+				files: 'build/sass/**/*.sass', // look in public sass, and within any sub directory for any scss
 				tasks: 'compass',
 				option: {
 					livereload: true //can change it to a specific port
