@@ -1,0 +1,22 @@
+// Mixins
+
+
+=tech-used($name,$color)
+	.#$name
+		@extend %button
+		border    			: 1px solid $color
+		font-color  		: $color
+
+
+
+=generate-box ($class, $width, $height)
+	.#$class
+		width: $width
+		height: $height
+
+
+=transition
+	transition        : background .2s ease, color 0.2s ease
+
+=transition-mix($type, $time, $method )
+	transition        : $type $time $method

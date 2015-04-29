@@ -1,32 +1,17 @@
-/*
-This allows me to create the classes of techniques
-without having to write out the text inside, or all the : and ;
-
-@include tech-used (.photoshop,$blue,1px);
-@include tech-used (.illustrator,$orange,1px);
-@include tech-used (.git,$purple,1px);
-*/
-@font-face {
-  font-family: "karlaitalic";
-  src: url('url("public/fonts/karla/karla-regular-webfont").eot');
-  src: url('url("public/fonts/karla/karla-regular-webfont").eot?#iefix') format("embedded-opentype"), url('url("public/fonts/karla/karla-regular-webfont").woff') format("woff"), url('url("public/fonts/karla/karla-regular-webfont").ttf') format("truetype"), url('url("public/fonts/karla/karla-regular-webfont").svg#karlaitalic') format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 8, ../../build/sass/includes/_button.scss */
+/* line 8, ../../build/sass/includes/_button.sass */
 a {
   color: #262626;
 }
-/* line 10, ../../build/sass/includes/_button.scss */
+/* line 10, ../../build/sass/includes/_button.sass */
 a:hover {
   text-decoration: none;
   color: #666666;
   cursor: pointer;
 }
 
-/* line 17, ../../build/sass/includes/_button.scss */
+/* line 17, ../../build/sass/includes/_button.sass */
 .button-contact, .button-resume {
-  transition: background .2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -41,30 +26,30 @@ a:hover {
   padding-top: 7px;
   cursor: pointer;
 }
-/* line 30, ../../build/sass/includes/_button.scss */
+/* line 30, ../../build/sass/includes/_button.sass */
 .button-contact:hover, .button-resume:hover {
   background: #262626;
   color: #F7F7F7;
 }
 
-/* line 38, ../../build/sass/includes/_button.scss */
+/* line 38, ../../build/sass/includes/_button.sass */
 .contact-style {
   font-weight: 300;
   letter-spacing: 2px;
 }
 
-/* line 43, ../../build/sass/includes/_button.scss */
+/* line 43, ../../build/sass/includes/_button.sass */
 .button-contact {
   width: 105px;
 }
 
-/* line 8, ../../build/sass/includes/_globals.scss */
+/* line 8, ../../build/sass/includes/_globals.sass */
 .post-divider {
   padding-bottom: 40px;
   height: 2px;
 }
 
-/* line 9, ../../build/sass/includes/_header.scss */
+/* line 8, ../../build/sass/includes/_header.sass */
 .avatar {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -83,7 +68,7 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 23, ../../build/sass/includes/_header.scss */
+/* line 21, ../../build/sass/includes/_header.sass */
 .header {
   background: #262626;
   background: url(../images/cover_train_over.jpg) no-repeat center center;
@@ -93,12 +78,12 @@ a:hover {
   background-size: cover;
   height: 560px;
 }
-/* line 28, ../../build/sass/includes/_header.scss */
+/* line 26, ../../build/sass/includes/_header.sass */
 .header .name {
   margin-top: 342px;
   color: #F7F7F7;
 }
-/* line 32, ../../build/sass/includes/_header.scss */
+/* line 30, ../../build/sass/includes/_header.sass */
 .header .name h1 {
   font-family: "DOCK11";
   font-size: 48px;
@@ -107,39 +92,39 @@ a:hover {
   text-transform: uppercase;
 }
 
-/* line 44, ../../build/sass/includes/_header.scss */
+/* line 40, ../../build/sass/includes/_header.sass */
 .sub-header {
   padding-top: 30px;
   height: 120px;
   background: #F7F7F7;
 }
-/* line 49, ../../build/sass/includes/_header.scss */
+/* line 45, ../../build/sass/includes/_header.sass */
 .sub-header .title {
   margin-top: 6px;
 }
 
-/* line 3, ../../build/sass/includes/_content.scss */
+/* line 3, ../../build/sass/includes/_content.sass */
 .content {
   background: #ECECEC;
   padding-bottom: 80px;
   padding-right: 80px;
 }
-/* line 5, ../../build/sass/includes/_content.scss */
+/* line 8, ../../build/sass/includes/_content.sass */
 .content .section {
   padding-top: 80px;
 }
-/* line 10, ../../build/sass/includes/_content.scss */
+/* line 11, ../../build/sass/includes/_content.sass */
 .content .thumbnail-post {
   height: 460px;
   width: 670px;
 }
-/* line 14, ../../build/sass/includes/_content.scss */
+/* line 15, ../../build/sass/includes/_content.sass */
 .content .thumbnail-post img {
   -moz-border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
   -webkit-border-radius: 6px 6px;
   border-radius: 6px 0px 0px 6px / 6px 0px 0px 6px;
 }
-/* line 16, ../../build/sass/includes/_content.scss */
+/* line 18, ../../build/sass/includes/_content.sass */
 .content .side-column {
   -moz-border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
   -webkit-border-radius: 0px 0px;
@@ -151,19 +136,19 @@ a:hover {
   padding: 40px;
   padding-left: 55px;
 }
-/* line 26, ../../build/sass/includes/_content.scss */
+/* line 28, ../../build/sass/includes/_content.sass */
 .content .side-column .post-description h4 {
   font-weight: 300;
   line-height: 190%;
 }
 
-/* line 3, ../../build/sass/includes/_footer.scss */
+/* line 3, ../../build/sass/includes/_footer.sass */
 footer {
   height: 80px;
   background: #F7F7F7;
   padding-top: 35px;
 }
-/* line 8, ../../build/sass/includes/_footer.scss */
+/* line 8, ../../build/sass/includes/_footer.sass */
 footer .footer-links {
   margin-left: 30px;
 }

@@ -1,0 +1,48 @@
+// Colors by name
+
+$header-bg 				  : $black
+$header-text			  : $cyan
+$sub-header-bg         : $white
+
+// Top Header
+.avatar
+	+border-radius(50%)
+	background          : url(../images/av.jpeg)  no-repeat center center
+	+background-size(cover)
+	background-position: 120% 90%
+	background: $white
+	height: $av-size
+	width: $av-size
+	margin-top: $av-margin-top
+	margin-left: $av-margin-left
+	overflow: hidden
+
+
+.header
+	background  		  : $header-bg
+	background          : url(../images/cover_train_over.jpg)  no-repeat center center
+	+background-size(cover)
+	height  				  : $header-height
+	.name
+		margin-top       : $name-margin-top
+		// margin-left      : $name-margin-left
+		color            : $white
+		h1
+			// font-family   : "Tall FIlms Expanded"
+			// font-family   : "Jaapokki subtract"
+			font-family   : "DOCK11"
+			font-size     : 48px
+			font-weight   : $lighter
+			letter-spacing: $slight
+			text-transform: uppercase
+
+
+.sub-header
+	// margin-top        : $title-margin-top
+	padding-top         : $sub-header-padding-top
+	height              : $sub-header-height
+	background          : $sub-header-bg
+	.title
+		margin-top       : $title-margin-top
+
+

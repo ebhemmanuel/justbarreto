@@ -1,0 +1,48 @@
+
+// Button
+$button-font-size   : 14px
+$button-height      : 30px
+$button-width       : 100px
+$button-padding     : 7px
+
+a
+	color             : $link
+	&:hover
+		text-decoration : none
+		color           : $link-hover
+		cursor          : pointer
+
+
+
+%button
+	+transition
+	+border-radius($border-button)
+	height            : $button-height
+	width             : $button-width
+	background        : transparent
+	font-size         : $button-font-size
+	border            : 1px solid $black
+	color             : $black
+	margin-left       : -3px
+	font-weight       : $light
+	padding-top       : $button-padding
+	cursor            : pointer
+	&:hover
+		background      : $black
+		color           : $white
+
+
+
+// Link format
+
+.contact-style
+	font-weight       : $light
+	letter-spacing    : $normal
+
+
+.button-contact
+	@extend %button
+	width             : 105px
+
+.button-resume
+	@extend %button
