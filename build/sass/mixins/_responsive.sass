@@ -1,6 +1,5 @@
-//
+
 // Mixin for inline responsive design
-//
 $phone             : 360px
 $tablet            : 600px
 $smallScreen       : 768px
@@ -15,10 +14,10 @@ $BigScreen         : 2800px
 @function maxW($breakPoint)
 	@return "(max-width:" + $breakPoint + ")"
 
-@mixin forScreen($size)
+=forScreen($size)
 
 	@if $size ==$largeScreen
-		@media #{minW($largeScreen)} and #{maxW($desktopScreen)}
+		@media #{maxW($largeScreen)}
 			@content
 
 	@if $size ==$phone

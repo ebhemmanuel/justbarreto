@@ -64,11 +64,10 @@ a:hover {
   height: 180px;
   width: 180px;
   margin-top: 150px;
-  margin-left: 50px;
   overflow: hidden;
 }
 
-/* line 21, ../../build/sass/includes/_header.sass */
+/* line 20, ../../build/sass/includes/_header.sass */
 .header {
   background: #262626;
   background: url(../images/cover_train_over.jpg) no-repeat center center;
@@ -78,12 +77,12 @@ a:hover {
   background-size: cover;
   height: 560px;
 }
-/* line 26, ../../build/sass/includes/_header.sass */
+/* line 25, ../../build/sass/includes/_header.sass */
 .header .name {
   margin-top: 342px;
   color: #F7F7F7;
 }
-/* line 30, ../../build/sass/includes/_header.sass */
+/* line 29, ../../build/sass/includes/_header.sass */
 .header .name h1 {
   font-family: "DOCK11";
   font-size: 48px;
@@ -92,13 +91,13 @@ a:hover {
   text-transform: uppercase;
 }
 
-/* line 40, ../../build/sass/includes/_header.sass */
+/* line 39, ../../build/sass/includes/_header.sass */
 .sub-header {
   padding-top: 30px;
   height: 120px;
   background: #F7F7F7;
 }
-/* line 45, ../../build/sass/includes/_header.sass */
+/* line 44, ../../build/sass/includes/_header.sass */
 .sub-header .title {
   margin-top: 6px;
 }
@@ -115,8 +114,8 @@ a:hover {
 }
 /* line 11, ../../build/sass/includes/_content.sass */
 .content .thumbnail-post {
-  height: 460px;
-  width: 670px;
+  height: 100%;
+  width: "";
 }
 /* line 15, ../../build/sass/includes/_content.sass */
 .content .thumbnail-post img {
@@ -131,7 +130,7 @@ a:hover {
   border-radius: 0px 6px 6px 0px / 0px 6px 6px 0px;
   margin-left: 15px;
   background: #F7F7F7;
-  width: 450px;
+  width: "";
   height: 460px;
   padding: 40px;
   padding-left: 55px;

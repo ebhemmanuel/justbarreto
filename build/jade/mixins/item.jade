@@ -1,11 +1,11 @@
 mixin item(href,image,title,desc)
 	.container.section
-		.thumbnail-post.col-lg-4
+		.thumbnail-post.col-sm-push-1.col-sm-10.col-md-6.col-lg-7
 			a(href=href target="blank")
 				img(src="public/images/"+image)
 				if image= null
 					image= 'public/images/noimages.jpg'
-		.side-column.col-lg-4
+		.side-column.col-sm-push-1.col-sm-11.col-md-4.col-lg-4
 			.title-post
 				h1= title
 			.post-description
