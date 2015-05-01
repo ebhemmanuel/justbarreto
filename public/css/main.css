@@ -51,23 +51,16 @@ a:hover {
 
 /* line 8, ../../build/sass/includes/_header.sass */
 .avatar {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: url(../images/av.jpeg) no-repeat center center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: 120% 90%;
-  background: #F7F7F7;
-  height: 180px;
-  width: 180px;
+  width: 220px;
+  max-width: 300px;
+  height: 230px;
   margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
-/* line 20, ../../build/sass/includes/_header.sass */
+/* line 23, ../../build/sass/includes/_header.sass */
 .header {
   background: #262626;
   background: url(../images/cover_train_over.jpg) no-repeat center center;
@@ -77,12 +70,14 @@ a:hover {
   background-size: cover;
   height: 100%;
 }
-/* line 25, ../../build/sass/includes/_header.sass */
+/* line 28, ../../build/sass/includes/_header.sass */
 .header .name {
-  margin-top: 442px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   color: #F7F7F7;
 }
-/* line 29, ../../build/sass/includes/_header.sass */
+/* line 33, ../../build/sass/includes/_header.sass */
 .header .name h1 {
   font-size: 48px;
   font-weight: lighter;
@@ -90,22 +85,22 @@ a:hover {
   text-transform: uppercase;
 }
 
-/* line 37, ../../build/sass/includes/_header.sass */
+/* line 41, ../../build/sass/includes/_header.sass */
 .title {
-  margin-top: 120px;
+  margin-top: 60px;
 }
-/* line 38, ../../build/sass/includes/_header.sass */
+/* line 42, ../../build/sass/includes/_header.sass */
 .title a {
   color: #78FDFF;
 }
 
-/* line 42, ../../build/sass/includes/_header.sass */
+/* line 46, ../../build/sass/includes/_header.sass */
 .sub-header {
   padding-top: 30px;
   height: 120px;
   background: #F7F7F7;
 }
-/* line 47, ../../build/sass/includes/_header.sass */
+/* line 51, ../../build/sass/includes/_header.sass */
 .sub-header .title {
   margin-top: 6px;
 }
@@ -160,7 +155,62 @@ footer .footer-links {
   margin-left: 30px;
 }
 
-/* line 13, ../../build/sass/main.sass */
+/* line 14, ../../build/sass/main.sass */
 body, html {
   height: 100%;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  /* line 4, ../../build/sass/views/_phone.sass */
+  .header .name {
+    margin-left: 5px;
+    margin-top: 0px;
+  }
+  /* line 7, ../../build/sass/views/_phone.sass */
+  .header .name h1 {
+    font-size: 18px;
+  }
+  /* line 9, ../../build/sass/views/_phone.sass */
+  .header .name h3 {
+    font-size: 14px;
+  }
+  /* line 11, ../../build/sass/views/_phone.sass */
+  .header .avatar {
+    width: 100%;
+    max-width: 120px;
+    height: 220px;
+    margin-top: 60px;
+    margin-bottom: -50px;
+  }
+  /* line 18, ../../build/sass/views/_phone.sass */
+  .header .title {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 669px) and (max-width: 960px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  /* line 25, ../../build/sass/views/_phone.sass */
+  .header .name {
+    margin-left: 5px;
+    margin-top: 0px;
+  }
+  /* line 28, ../../build/sass/views/_phone.sass */
+  .header .name h1 {
+    font-size: 25px;
+  }
+  /* line 30, ../../build/sass/views/_phone.sass */
+  .header .name h3 {
+    font-size: 18px;
+  }
+  /* line 32, ../../build/sass/views/_phone.sass */
+  .header .avatar {
+    width: 100%;
+    max-width: 180px;
+    height: 220px;
+    margin-top: 160px;
+    margin-bottom: -20px;
+  }
+  /* line 39, ../../build/sass/views/_phone.sass */
+  .header .title {
+    margin-top: 10px;
+  }
 }

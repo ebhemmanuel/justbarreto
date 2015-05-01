@@ -1,15 +1,19 @@
 
 // Mixin for inline responsive design
-$phone             : 360px
-$tablet            : 600px
+$phonePortrait     : ''
+$phoneLandscape    : ''
+$tablet            : ''
 $smallScreen       : 768px
 $mediumScreen      : 992px
 $largeScreen       : 1200px
 $desktopScreen     : 1920px
 $BigScreen         : 2800px
+// Screen Sizes
+$iphone6MinW          : 375px
+$iphone6MaxW           : 667px
 
 @function minW($breakPoint)
-	@return "screen and (min-width:" + $breakPoint + ")"
+	@return "only screen and (min-width:" + $breakPoint + ")"
 
 @function maxW($breakPoint)
 	@return "(max-width:" + $breakPoint + ")"
@@ -20,19 +24,13 @@ $BigScreen         : 2800px
 		@media #{maxW($largeScreen)}
 			@content
 
-	@if $size ==$phone
-		@media #{minW($phone)} and #{maxW(400px)}
+	@if $size ==$phonePortrait
+		@media #{minW($iphone6MinW)} and #{maxW($iphone6MaxW)} and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
 			@content
 
 	@if $size == $tablet
 		@media  #{minW(401px)} and #{maxW($mediumScreen)} and (orientation: portrait)
 			@content
-
-	@if $size == $smallScreen
-		@media #{minW($smallScreen)}
-			@content;
-
-	@if $size == $mediumScreen
-		@media #{minW($mediumScreen)}
-			@content;
-
+=media($minW, $maxW)
+	@media #{minW($minW)} and #{maxW($maxW)} and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 1)
+		@content
