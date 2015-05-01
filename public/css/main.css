@@ -19,8 +19,8 @@ a:hover {
   width: 100px;
   background: transparent;
   font-size: 14px;
-  border: 1px solid #262626;
-  color: #262626;
+  border: 1px solid #78FDFF;
+  color: #78FDFF;
   margin-left: -3px;
   font-weight: 300;
   padding-top: 7px;
@@ -28,8 +28,8 @@ a:hover {
 }
 /* line 29, ../../build/sass/includes/_button.sass */
 .button-contact:hover, .button-resume:hover {
-  background: #262626;
-  color: #F7F7F7;
+  background: #78FDFF;
+  color: #262626;
 }
 
 /* line 36, ../../build/sass/includes/_button.sass */
@@ -63,7 +63,7 @@ a:hover {
   background: #F7F7F7;
   height: 180px;
   width: 180px;
-  margin-top: 150px;
+  margin-top: 200px;
   overflow: hidden;
 }
 
@@ -75,29 +75,37 @@ a:hover {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 560px;
+  height: 100%;
 }
 /* line 25, ../../build/sass/includes/_header.sass */
 .header .name {
-  margin-top: 342px;
+  margin-top: 442px;
   color: #F7F7F7;
 }
 /* line 29, ../../build/sass/includes/_header.sass */
 .header .name h1 {
-  font-family: "DOCK11";
   font-size: 48px;
   font-weight: lighter;
   letter-spacing: 3.5px;
   text-transform: uppercase;
 }
 
-/* line 39, ../../build/sass/includes/_header.sass */
+/* line 37, ../../build/sass/includes/_header.sass */
+.title {
+  margin-top: 120px;
+}
+/* line 38, ../../build/sass/includes/_header.sass */
+.title a {
+  color: #78FDFF;
+}
+
+/* line 42, ../../build/sass/includes/_header.sass */
 .sub-header {
   padding-top: 30px;
   height: 120px;
   background: #F7F7F7;
 }
-/* line 44, ../../build/sass/includes/_header.sass */
+/* line 47, ../../build/sass/includes/_header.sass */
 .sub-header .title {
   margin-top: 6px;
 }
@@ -150,4 +158,9 @@ footer {
 /* line 8, ../../build/sass/includes/_footer.sass */
 footer .footer-links {
   margin-left: 30px;
+}
+
+/* line 13, ../../build/sass/main.sass */
+body, html {
+  height: 100%;
 }
