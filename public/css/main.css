@@ -105,6 +105,11 @@ a:hover {
   margin-top: 6px;
 }
 
+/* line 54, ../../build/sass/includes/_header.sass */
+.landscape {
+  display: none;
+}
+
 /* line 3, ../../build/sass/includes/_content.sass */
 .content {
   background: #ECECEC;
@@ -160,7 +165,7 @@ body, html {
   height: 100%;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
   /* line 4, ../../build/sass/views/_phone.sass */
   .header .name {
     margin-left: 5px;
@@ -187,21 +192,102 @@ body, html {
     margin-top: 10px;
   }
 }
-@media only screen and (min-width: 669px) and (max-width: 960px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  /* line 25, ../../build/sass/views/_phone.sass */
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 23, ../../build/sass/views/_phone.sass */
   .header .name {
     margin-left: 5px;
     margin-top: 0px;
   }
+  /* line 26, ../../build/sass/views/_phone.sass */
+  .header .name h1 {
+    font-size: 1.1em;
+  }
   /* line 28, ../../build/sass/views/_phone.sass */
+  .header .name h3 {
+    font-size: 1em;
+  }
+  /* line 30, ../../build/sass/views/_phone.sass */
+  .header .avatar {
+    width: 100%;
+    max-width: 80px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    opacity: 0;
+  }
+  /* line 38, ../../build/sass/views/_phone.sass */
+  .header .title {
+    margin-top: 10px;
+  }
+  /* line 40, ../../build/sass/views/_phone.sass */
+  .header .title h4 {
+    font-size: 1.1em;
+  }
+  /* line 42, ../../build/sass/views/_phone.sass */
+  .header .title h3 {
+    font-size: 1em;
+  }
+  /* line 45, ../../build/sass/views/_phone.sass */
+  .header .title ul li {
+    margin-bottom: -2px;
+  }
+  /* line 49, ../../build/sass/views/_phone.sass */
+  .header .resume ul li {
+    margin-top: 20px;
+  }
+
+  /* line 51, ../../build/sass/views/_phone.sass */
+  .landscape {
+    display: block;
+  }
+
+  /* line 53, ../../build/sass/views/_phone.sass */
+  .desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 604px) and (max-width: 966px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.331) {
+  /* line 59, ../../build/sass/views/_phone.sass */
+  .header .name {
+    margin-left: 5px;
+    margin-top: 0px;
+  }
+  /* line 62, ../../build/sass/views/_phone.sass */
   .header .name h1 {
     font-size: 25px;
   }
-  /* line 30, ../../build/sass/views/_phone.sass */
+  /* line 64, ../../build/sass/views/_phone.sass */
   .header .name h3 {
     font-size: 18px;
   }
-  /* line 32, ../../build/sass/views/_phone.sass */
+  /* line 66, ../../build/sass/views/_phone.sass */
+  .header .avatar {
+    width: 100%;
+    max-width: 60px;
+    height: 120px;
+    margin-top: 120px;
+    margin-bottom: -20px;
+  }
+  /* line 73, ../../build/sass/views/_phone.sass */
+  .header .title {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 669px) and (max-width: 960px) {
+  /* line 80, ../../build/sass/views/_phone.sass */
+  .header .name {
+    margin-left: 5px;
+    margin-top: 0px;
+  }
+  /* line 83, ../../build/sass/views/_phone.sass */
+  .header .name h1 {
+    font-size: 25px;
+  }
+  /* line 85, ../../build/sass/views/_phone.sass */
+  .header .name h3 {
+    font-size: 18px;
+  }
+  /* line 87, ../../build/sass/views/_phone.sass */
   .header .avatar {
     width: 100%;
     max-width: 180px;
@@ -209,7 +295,7 @@ body, html {
     margin-top: 160px;
     margin-bottom: -20px;
   }
-  /* line 39, ../../build/sass/views/_phone.sass */
+  /* line 94, ../../build/sass/views/_phone.sass */
   .header .title {
     margin-top: 10px;
   }

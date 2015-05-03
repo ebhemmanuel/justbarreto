@@ -1,5 +1,5 @@
 // Mobile
-+media($iphone6MinW,$iphone6MaxW)
++media("portrait",$iphone6MinW,$iphone6MaxW,2)
 	.header
 		.name
 			margin-left   : 5px
@@ -18,9 +18,64 @@
 		.title
 			margin-top     : 10px
 
++media("landscape",$iphone6MinW,$iphone6MaxW,2)
+	.header
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				font-size  : 1.1em
+			h3
+				font-size   : 1em
+		.avatar
+			width          : 100%
+			max-width      : 80px
+			height         : 100px
+			margin-top     : 20px
+			// margin-left    : 29%
+			margin-bottom  : -30px
+			opacity   		: 0
+		.title
+			margin-top     : 10px
+			h4
+				font-size   : 1.1em
+			h3
+				font-size   : 1em
+			ul
+				li
+					margin-bottom: -2px
+		.resume
+			ul
+				li
+					margin-top: 20px
+	.landscape
+		display           : block
+	.desktop
+		display           : none
+
+// Tablet
++media("landscape",604px,966px,1.331)
+	.header
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				font-size  : 25px
+			h3
+				font-size   : 18px
+		.avatar
+			width          : 100%
+			max-width      : 60px
+			height         : 120px
+			margin-top     : 120px
+			// margin-left    : 29%
+			margin-bottom  : -20px
+		.title
+			margin-top     : 10px
+
 
 // Medium Screen
-+media(669px,960px)
++media("desktop",669px,960px,null)
 	.header
 		.name
 			margin-left   : 5px

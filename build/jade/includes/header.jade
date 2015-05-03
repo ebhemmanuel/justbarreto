@@ -1,4 +1,4 @@
-.header.container-fluid
+.header.desktop.container-fluid
 	.container.text-center
 		img.avatar(src="./public/images/logo.svg")
 	.name
@@ -12,10 +12,10 @@
 		.title.col-xs-10.col-xs-push-1.col-sm-10.col-sm-push-1.col-md-10.col-md-push-1.col-lg-10.col-lg-push-1
 			ul.list-inline
 				li
-					h4
+					h3
 						a(href="https://dribbble.com/justbarreto" target="_blank") Dribbble
 				li
-					h4
+					h3
 						a(href="https://github.com/justbarreto" target="_blank") Github
 				//- li
 				//- 	strong
@@ -30,30 +30,9 @@
 			ul.list-inline
 				li
 					a(href="download/BarretoEmmanuelResume.docx" target="_blank")
-						h4.contact-style.button-resume.text-center
+						h3.contact-style.button-resume.text-center
 							| Resume
 
-//- .sub-header.container-fluid.text-center
-//- 	.title.col-xs-10.col-xs-push-1.col-md-9.col-lg-9
-//- 		ul.list-inline
-//- 			li
-//- 				h3
-//- 					a(href="https://dribbble.com/justbarreto" target="_blank") Dribbble
-//- 			li
-//- 				h3
-//- 					a(href="https://github.com/ebhemmanuel" target="_blank") Github
-//- 			li
-//- 				| |
-//- 			//- li
-//- 			//- 	strong
-//- 			//- 		| Get in touch &#8594;
-//- 			li
-//- 				a(href="mailto:ebh.emmanuel@gmail.com" target="_blank") Email
-//- 			li
-//- 				a(href="https://www.linkedin.com/in/justbarreto" target="_blank"). LinkedIn
-//- 			li
-//- 				a(href="https://twitter.com/justbarreto" target="_blank"). Twitter
-//- 			li
-//- 				a(href="download/Barreto_Emmanuel_Resume(online).pdf" target="_blank")
-//- 					h4.contact-style.button-resume.text-center
-//- 						| Resume
+include headerLan
+
+include subheader
