@@ -22,7 +22,7 @@ $sub-header-bg         : $white
 
 .header
 	background  		  : $header-bg
-	background          : url(../images/cover_train_over.jpg)  no-repeat center center
+	background          : url(../images/cover_train.jpg)  no-repeat center center
 	+background-size(cover)
 	height  				  : $header-height
 	.name
@@ -34,7 +34,7 @@ $sub-header-bg         : $white
 			// font-family   : "Tall FIlms Expanded"
 			// font-family   : "Jaapokki subtract"
 			// font-family   : "DOCK11"
-			font-size     : 48px
+			@include rem(font-size, 3.4rem)
 			font-weight   : $lighter
 			letter-spacing: $slight
 			text-transform: uppercase

@@ -1,6 +1,86 @@
-// Mobile
-+media("portrait",$iphone6MinW,$iphone6MaxW,2)
+// Mobile Iphone6
++media("portrait",320px,569px,2)
 	.header
+		background          : url(../images/iphone6_port.jpg)  no-repeat center center
+		+background-size(cover)
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				@include rem(font-size, 1.5rem)
+			h3
+				@include rem(font-size, 1.2rem)
+		.avatar
+			width          : 100%
+			max-width      : 120px
+			height         : 220px
+			margin-top     : 60px
+			// margin-left    : 29%
+			margin-bottom  : -50px
+		.title
+			margin-top     : 10px
+			h4
+				@include rem(font-size, 1.1rem)
+			h3
+				@include rem(font-size, 1.8rem)
+			ul
+				li
+					margin-bottom: -2px
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
+
++media("landscape",320px,569px,2)
+	.header
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				@include rem(font-size, 1rem)
+				font-weight: normal
+			h3
+				font-size   : 1em
+		.avatar
+			width          : 100%
+			max-width      : 80px
+			height         : 100px
+			margin-top     : 0px
+			// margin-left    : 29%
+			margin-bottom  : -30px
+			opacity   		: 0
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
+		.title
+			margin-top     : 10px
+			h4
+				@include rem(font-size, 1.1rem)
+			h3
+				@include rem(font-size, 1rem)
+			ul
+				li
+					margin-bottom: -2px
+		.resume
+			ul
+				li
+					margin-top: 20px
+	.landscape
+		display           : block
+	.desktop
+		display           : none
+
+
+// Mobile HTC
++media("portrait",360px,640px,2)
+	.header
+		background          : url(../images/iphone6_port.jpg)  no-repeat center center
+		+background-size(cover)
 		.name
 			margin-left   : 5px
 			margin-top    : 0px
@@ -17,24 +97,37 @@
 			margin-bottom  : -50px
 		.title
 			margin-top     : 10px
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
 
-+media("landscape",$iphone6MinW,$iphone6MaxW,2)
++media("landscape",360px,640px,2)
 	.header
 		.name
 			margin-left   : 5px
 			margin-top    : 0px
 			h1
 				font-size  : 1.1em
+				font-weight: normal
 			h3
 				font-size   : 1em
 		.avatar
 			width          : 100%
 			max-width      : 80px
 			height         : 100px
-			margin-top     : 20px
+			margin-top     : 0px
 			// margin-left    : 29%
 			margin-bottom  : -30px
 			opacity   		: 0
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
 		.title
 			margin-top     : 10px
 			h4
@@ -53,25 +146,108 @@
 	.desktop
 		display           : none
 
-// Tablet
-+media("landscape",604px,966px,1.331)
+// Mobile Iphone6
++media("portrait",$iphone6MinW,$iphone6MaxW,2)
+	.header
+		background          : url(../images/iphone6_port.jpg)  no-repeat center center
+		+background-size(cover)
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				font-size  : 18px
+			h3
+				font-size   : 14px
+		.avatar
+			width          : 100%
+			max-width      : 120px
+			height         : 220px
+			margin-top     : 60px
+			// margin-left    : 29%
+			margin-bottom  : -50px
+		.title
+			margin-top     : 10px
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
+
++media("landscape",$iphone6MinW,$iphone6MaxW,2)
 	.header
 		.name
 			margin-left   : 5px
 			margin-top    : 0px
 			h1
-				font-size  : 25px
+				font-size  : 1.2em
+				font-weight: normal
 			h3
-				font-size   : 18px
+				font-size   : 1em
 		.avatar
 			width          : 100%
-			max-width      : 60px
-			height         : 120px
-			margin-top     : 120px
+			max-width      : 80px
+			height         : 100px
+			margin-top     : 0px
 			// margin-left    : 29%
-			margin-bottom  : -20px
+			margin-bottom  : -30px
+			opacity   		: 0
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
 		.title
 			margin-top     : 10px
+			h4
+				font-size   : 1.1em
+			h3
+				font-size   : 1em
+			ul
+				li
+					margin-bottom: -2px
+		.resume
+			ul
+				li
+					margin-top: 20px
+	.landscape
+		display           : block
+	.desktop
+		display           : none
+
+// Tablet Nexus 7 2
++media("portrait",600px,960px,2)
+	.header
+		.name
+			margin-left   : 5px
+			margin-top    : 0px
+			h1
+				@include rem(font-size, 1.5rem)
+			h3
+				@include rem(font-size, 1.2rem)
+		.avatar
+			width          : 100%
+			max-width      : 120px
+			height         : 220px
+			margin-top     : 60px
+			// margin-left    : 29%
+			margin-bottom  : -50px
+		.title
+			margin-top     : 10px
+			h4
+				@include rem(font-size, 1.1rem)
+			h3
+				@include rem(font-size, 1.8rem)
+			ul
+				li
+					margin-bottom: -2px
+		.button-resume
+			@include rem(font-size, 2rem)
+			+border-radius($border-button*2)
+			height         : 50px
+			width          : $button-width*2
+			padding   		: $button-padding*2
 
 
 // Medium Screen
@@ -93,22 +269,3 @@
 			margin-bottom  : -20px
 		.title
 			margin-top     : 10px
-
-
-// +forScreen($phonePortrait)
-// 	.header
-// 		.name
-// 			margin-left : -15px
-// 			margin-top  : 0px
-// 			h1
-// 				font-size: 25px
-// 			h3
-// 				font-size: 14px
-// 	.avatar
-// 		width          : 150px
-// 		height         : 220px
-// 		margin-top     : 80px
-// 		margin-left    : 10%
-// 	.title
-// 		margin-top     : 40px
-

@@ -9,8 +9,8 @@ $largeScreen       : 1200px
 $desktopScreen     : 1920px
 $BigScreen         : 2800px
 // Screen Sizes
-$iphone6MinW          : 375px
-$iphone6MaxW           : 667px
+$iphone6MinW       : 375px
+$iphone6MaxW       : 667px
 
 @function minW($breakPoint)
 	@return "only screen and (min-width:" + $breakPoint + ")"
@@ -35,7 +35,7 @@ $iphone6MaxW           : 667px
 		@media  #{minW(401px)} and #{maxW($mediumScreen)} and (orientation: portrait)
 			@content
 
-=media($form,$minW, $maxW,$scale)
+=media($form,$minW,$maxW,$scale)
 
 	@if $form == "portrait"
 		@media #{minW($minW)} and #{maxW($maxW)} and (orientation : portrait) and (-webkit-min-device-pixel-ratio : $scale)
@@ -45,13 +45,14 @@ $iphone6MaxW           : 667px
 		@media #{minW($minW)} and #{maxW($maxW)} and (orientation : landscape) and (-webkit-min-device-pixel-ratio : $scale)
 			@content
 
-	@if $form == "tabletPortrait"
-		@media #{tablet($minW,$maxW,$scale,$scale+0.001)} and (orientation : portrait)
-			@content
 
-	@if $form == "tabletLanscape"
-		@media #{tablet($minW,$maxW,$scale,$scale+0.001)} and (orientation : landscape)
-			@content
+	// @if $form == "tabletPortrait"
+	// 	@media #{tablet($minW,$maxW,$scale,$scale+0.001)} and (orientation : portrait)
+	// 		@content
+
+	// @if $form == "tabletLanscape"
+	// 	@media #{tablet($minW,$maxW,$scale,$scale)}
+	// 		@content
 
 	@if $form == "desktop" and $scale == null
 		@media #{minW($minW)} and #{maxW($maxW)}
