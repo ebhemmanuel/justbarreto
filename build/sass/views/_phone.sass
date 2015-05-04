@@ -1,4 +1,4 @@
-// Mobile Iphone6
+// Mobile Iphone5
 +media("portrait",320px,569px,2)
 	.header
 		background          : url(../images/iphone6_port.jpg)  no-repeat center center
@@ -109,10 +109,11 @@
 			margin-left   : 5px
 			margin-top    : 0px
 			h1
-				font-size  : 1.1em
+				@include rem(font-size, 1.4rem)
 				font-weight: normal
 			h3
-				font-size   : 1em
+				@include rem(font-size, 1.4rem)
+				@include rem(line-height, 1.1rem)
 		.avatar
 			width          : 100%
 			max-width      : 80px
@@ -129,9 +130,10 @@
 		.title
 			margin-top     : 10px
 			h4
-				font-size   : 1.1em
+				@include rem(font-size, 1.4rem)
 			h3
-				font-size   : 1em
+				@include rem(font-size, 1.4rem)
+				@include rem(line-height, 1.1rem)
 			ul
 				li
 					margin-bottom: -2px
@@ -153,9 +155,9 @@
 			margin-left   : 5px
 			margin-top    : 0px
 			h1
-				font-size  : 18px
+				@include rem(font-size, 1.7rem)
 			h3
-				font-size   : 14px
+				@include rem(font-size, 1.4rem)
 		.avatar
 			width          : 100%
 			max-width      : 120px
