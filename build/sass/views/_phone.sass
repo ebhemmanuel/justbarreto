@@ -93,7 +93,6 @@
 			max-width      : 120px
 			height         : 220px
 			margin-top     : 60px
-			// margin-left    : 29%
 			margin-bottom  : -50px
 		.title
 			margin-top     : 10px
@@ -119,7 +118,6 @@
 			max-width      : 80px
 			height         : 100px
 			margin-top     : 0px
-			// margin-left    : 29%
 			margin-bottom  : -30px
 			opacity   		: 0
 		.button-resume
@@ -163,7 +161,6 @@
 			max-width      : 120px
 			height         : 220px
 			margin-top     : 60px
-			// margin-left    : 29%
 			margin-bottom  : -50px
 		.title
 			margin-top     : 10px
@@ -180,16 +177,16 @@
 			margin-left   : 5px
 			margin-top    : 0px
 			h1
-				font-size  : 1.2em
+				@include rem(font-size, 1.5rem)
 				font-weight: normal
 			h3
-				font-size   : 1em
+				@include rem(font-size, 1.4rem)
+				@include rem(line-height, 1.4rem)
 		.avatar
 			width          : 100%
 			max-width      : 80px
 			height         : 100px
 			margin-top     : 0px
-			// margin-left    : 29%
 			margin-bottom  : -30px
 			opacity   		: 0
 		.button-resume
@@ -201,9 +198,10 @@
 		.title
 			margin-top     : 10px
 			h4
-				font-size   : 1.1em
+				@include rem(font-size, 1.5rem)
 			h3
-				font-size   : 1em
+				@include rem(font-size, 1.4rem)
+				@include rem(line-height, 1.4rem)
 			ul
 				li
 					margin-bottom: -2px
@@ -216,56 +214,4 @@
 	.desktop
 		display           : none
 
-// Tablet Nexus 7 2
-+media("portrait",600px,960px,2)
-	.header
-		.name
-			margin-left   : 5px
-			margin-top    : 0px
-			h1
-				@include rem(font-size, 1.5rem)
-			h3
-				@include rem(font-size, 1.2rem)
-		.avatar
-			width          : 100%
-			max-width      : 120px
-			height         : 220px
-			margin-top     : 60px
-			// margin-left    : 29%
-			margin-bottom  : -50px
-		.title
-			margin-top     : 10px
-			h4
-				@include rem(font-size, 1.1rem)
-			h3
-				@include rem(font-size, 1.8rem)
-			ul
-				li
-					margin-bottom: -2px
-		.button-resume
-			@include rem(font-size, 2rem)
-			+border-radius($border-button*2)
-			height         : 50px
-			width          : $button-width*2
-			padding   		: $button-padding*2
 
-
-// Medium Screen
-+media("desktop",669px,960px,null)
-	.header
-		.name
-			margin-left   : 5px
-			margin-top    : 0px
-			h1
-				font-size  : 25px
-			h3
-				font-size   : 18px
-		.avatar
-			width          : 100%
-			max-width      : 180px
-			height         : 220px
-			margin-top     : 160px
-			// margin-left    : 29%
-			margin-bottom  : -20px
-		.title
-			margin-top     : 10px
